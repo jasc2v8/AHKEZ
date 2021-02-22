@@ -1,2 +1,2 @@
 # AHKEZ
-EZ Version of AutoHotkey_L
+EZ Version of AutoHotkey_L is a work in progress coming soon in 2021...
