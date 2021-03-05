@@ -14,13 +14,14 @@ AutoHotkey EZ is a free and open source version of AutoHotkey_L_v1.1.33.02
 
 AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
     
-Links: https://autohotkey.com/ and: https://github.com/Lexikos/AutoHotkey_L
+Links: [Autohotkey Home](https://autohotkey.com/) and: [Autohotkey on GitHub](https://github.com/Lexikos/AutoHotkey_L)
 
 # How to Use #
 
-1. Copy Lib\AHKEZ.ahk to your AHK Library folder: https://www.autohotkey.com/docs/Functions.htm#lib
+1. Copy Lib\AHKEZ.ahk to your [AHK Library folder](https://www.autohotkey.com/docs/Functions.htm#lib)
 1. Copy Lib\AHKEZ_API.ahk for use as a reference doc
 1. Add the following at the top of your AHK script: `#Include <AHKEZ>`
+1. Study the [AHKEZ docs](https://jasc2v8.github.io/AHKEZ/)
 1. Write code using AHK_L_v1 or AHKEZ, or both!
 1. Enjoy writing AHK scripts with minimal confusion when to use `variable` or `%variable%`
 
