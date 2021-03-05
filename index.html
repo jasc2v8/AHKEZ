@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="jasc2v8" />
-  <meta name="dcterms.date" content="2021-03-04" />
+  <meta name="dcterms.date" content="2021-01-21" />
   <title>AHKEZ</title>
   <style>
     code{white-space: pre-wrap;}
@@ -16,7 +16,7 @@
     ul.task-list{list-style: none;}
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="ahk-theme.css"/>
+  <link rel="stylesheet" href="ahk-theme.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -25,7 +25,7 @@
 <header id="title-block-header">
 <h1 class="title">AHKEZ</h1>
 <p class="author">jasc2v8</p>
-<p class="date">March 3, 2021</p>
+<p class="date">January 21, 2021</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -49,14 +49,14 @@
 <li><a href="#donations">Donations</a></li>
 </ul>
 </nav>
-<!-- reminder: global replace \" with \" -->
+<!-- reminder: global replace = "" with = \"\" -->
 <h1 id="toc">TOC</h1>
 <p>The table of contents is listed above.</p>
 <h1 id="quick-reference">Quick Reference</h1>
 <p>This doc is for the additional Functions included in the AHKEZ.ahk library.<br />
 For all AHK built-in commands and functions see the <a href="https://www.autohotkey.com/docs/AutoHotkey.htm">AutoHotkey Quick Reference</a></p>
-<p><a href="https://github.com/jasc2v8/AHKEZ_DEV">AutoHotkey EZ</a> is a free and open source version of <a href="https://github.com/AutoHotkey/AutoHotkey">AHK_L_v1.1.33.02</a></p>
-<p>License: Dedicated to the public domain without liability or warranty <a href="http://creativecommons.org/publicdomain/zero/1.0/">(CC0 1.0)</a></p>
+<p><a href="https://github.com/jasc2v8/AHKEZ">AutoHotkey EZ</a> is a free and open source version of <a href="https://github.com/AutoHotkey/AutoHotkey">AHK_L_v1.1.33.02</a></p>
+<p>License: Dedicated to the public domain without warranty or liability <a href="http://creativecommons.org/publicdomain/zero/1.0/">(CC0 1.0)</a></p>
 <dl>
 <dt><strong>Doc Conventions</strong></dt>
 <dd>ControlID is the HWND of a control e.g. hBtnOK
@@ -77,23 +77,23 @@ AhkClass(p), AhkExe(p), AhkGroup(p), AhkId(p), AhkPid(p)
 <tbody>
 <tr class="odd">
 <td>"ahk_class"</td>
-<td style="text-align: left;">WinTitle</td>
+<td style="text-align: right;">WinTitle</td>
 </tr>
 <tr class="even">
 <td>"ahk_exe"</td>
-<td style="text-align: left;">WinTitle</td>
+<td style="text-align: right;">WinTitle</td>
 </tr>
 <tr class="odd">
 <td>"ahk_group"</td>
-<td style="text-align: left;">WinTitle</td>
+<td style="text-align: right;">WinTitle</td>
 </tr>
 <tr class="even">
 <td>"ahk_id"</td>
-<td style="text-align: left;">WinTitle</td>
+<td style="text-align: right;">WinTitle</td>
 </tr>
 <tr class="odd">
 <td>"ahk_pid"</td>
-<td style="text-align: left;">WinTitle</td>
+<td style="text-align: right;">WinTitle</td>
 </tr>
 </tbody>
 </table>
@@ -108,7 +108,7 @@ AhkClass(p), AhkExe(p), AhkGroup(p), AhkId(p), AhkPid(p)
 </dl>
 <h2 class="unlisted unnumbered" id="examples">Examples</h2>
 <pre><code>AHK_L: Control, %SubCommand%, %Value%, %Control%, ahk_id %WinTitle%
- AHKEZ: Control(\&quot;SubCommand\&quot;, \&quot;Value\&quot;, \&quot;Control\&quot;, AhkId(\&quot;MyWinTitle\&quot;))</code></pre>
+ AHKEZ: Control(&quot;SubCommand&quot;, &quot;Value&quot;, &quot;Control&quot;, AhkId(&quot;MyWinTitle&quot;))</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="controlselect">ControlSelect</h1>
 <p>Selects a control</p>
@@ -147,7 +147,7 @@ EditGetSelectedText(ControlID)<br />
 EditPaste(ControlID, String = "")<br />
 EditSetText(ControlID, NewText = "")
 </p>
-<p>EditAppend - appends text at caret position with a CRLF (`r`n)<br />
+<p>EditAppend - appends text at caret position <strong>with</strong> a CRLF (`r`n)<br />
 EditClear - clears the text<br />
 EditGetCurrentCol - gets the current column number<br />
 EditGetCurrentLine - gets the current line number<br />
@@ -173,10 +173,10 @@ The ControlID is found using WinGet(,"MyTitle").</p>
 <h2 class="unlisted unnumbered" id="examples-2">Examples</h2>
 <p>#1: Using the ControlID</p>
 <pre><code>AHK_L: Control, EditPaste, %String%, , ahk_id %hEditMemo%
- AHKEZ: EditPaste(hEditMemo, \&quot;String\&quot;)</code></pre>
+ AHKEZ: EditPaste(hEditMemo, &quot;String&quot;)</code></pre>
 <p>#1: Using AhkId() to get the ControlID from the ClassNN</p>
 <pre><code>AHK_L: Control, EditPaste, %String%, ahk_class Edit1, ahk_id %hEditMemo%
- AHKEZ: EditPaste(AhkId(\&quot;Edit1\&quot;), \&quot;String\&quot;)</code></pre>
+ AHKEZ: EditPaste(AhkId(&quot;Edit1&quot;), &quot;String&quot;)</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="filewrite">FileWrite</h1>
 <p>Writes text to a file with option to overwrite.</p>
@@ -232,20 +232,20 @@ Gui(SubCommand = "New", Value1 = "", Value2 = "", Value3 = "")
 <p>Implementation of <a href="https://www.autohotkey.com/docs/commands/Gui.htm">Gui</a></p>
 <p>AHK_L returns the Control or Gui ID with the "+HWND" option.</p>
 <p>AHKEZ doesn’t support this option, instead the HWND is obtains as follows:</p>
-<pre><code>    hGui := Gui(\&quot;New\&quot;...)  
-     hControl := Gui(\&quot;Add\&quot;, Control...)  
-     hGui := Gui(\&quot;Show\&quot;...)  ; in case the \&quot;New\&quot; SubCommand is not present  </code></pre>
+<pre><code>    hGui := Gui(&quot;New&quot;...)  
+     hControl := Gui(&quot;Add&quot;, Control...)  
+     hGui := Gui(&quot;Show&quot;...)  ; in case the &quot;New&quot; SubCommand is not present  </code></pre>
 <h2 class="unlisted unnumbered" id="examples-4">Examples</h2>
 <pre><code>AHK_L:
 
     Gui, New, +HWNDhGuiA, MyTitle
-    MsgBox % \&quot;HWNDhGui = \&quot; hGuiA
+    MsgBox % &quot;HWNDhGui = &quot; hGuiA
     Gui, Destroy
 
  AHKEZ:
  
-    hGuiB := Gui(\&quot;New\&quot;, , \&quot;MyTitle\&quot;)
-    MsgBox % \&quot;HWNDhGui = \&quot; hGuiB</code></pre>
+    hGuiB := Gui(&quot;New&quot;, , &quot;MyTitle&quot;)
+    MsgBox % &quot;HWNDhGui = &quot; hGuiB</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="is-functions">Is Functions</h1>
 <p>These functions test a variable and return True or False.</p>
@@ -285,17 +285,17 @@ IsType - Returns True if var is type, else False.</p>
 
  AHKEZ:
 
-    If IsBlank(MyVar, \&quot;A_Space\&quot;)  
-        MsgBox(\&quot;is blank\&quot;)
+    If IsBlank(MyVar, &quot;A_Space&quot;)  
+        MsgBox(&quot;is blank&quot;)
 
-    If IsEmpty(MyVar, \&quot;\&quot;)  
-        MsgBox(\&quot;is empty\&quot;)
+    If IsEmpty(MyVar, &quot;&quot;)  
+        MsgBox(&quot;is empty&quot;)
 
-    If IsType(MyVar, \&quot;integer\&quot;)  
-        MsgBox(\&quot;is integer\&quot;)
+    If IsType(MyVar, &quot;integer&quot;)  
+        MsgBox(&quot;is integer&quot;)
 
-    If IsType(MyVar, \&quot;string\&quot;)  
-        MsgBox(\&quot;is string\&quot;)</code></pre>
+    If IsType(MyVar, &quot;string&quot;)  
+        MsgBox(&quot;is string&quot;)</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="join">Join</h1>
 <p>Concatenates strings together, or mutiples of the same string.</p>
@@ -330,16 +330,16 @@ Join(Separator, Params*)
  AHKEZ:
 
     v := Join(3, A_Space)
-        MsgBox(&quot;&gt;\&quot; v \&quot;&lt;\&quot;) ; 3 spaces
+        MsgBox(&quot;&gt;&quot; v &quot;&lt;&quot;) ; 3 spaces
 
-    v := Join(A_Space, \&quot;The\&quot;, \&quot;cold\&quot;, \&quot;rain.\&quot;)
-        MsgBox(v) ; \&quot;The cold rain.\&quot;
+    v := Join(A_Space, &quot;The&quot;, &quot;cold&quot;, &quot;rain.&quot;)
+        MsgBox(v) ; &quot;The cold rain.&quot;
 
-    v := Join(\&quot;:\&quot;, \&quot;The result is \&quot;, 3.14)
-        MsgBox(var) ; \&quot;The result is: 3.14\&quot;
+    v := Join(&quot;:&quot;, &quot;The result is &quot;, 3.14)
+        MsgBox(var) ; &quot;The result is: 3.14&quot;
 
-    v := Join(\&quot;:\&quot;, \&quot;The result is \&quot;, MyValue := -3.14)
-     MsgBox(var) ; \&quot;The result is: -3.14\&quot;
+    v := Join(&quot;:&quot;, &quot;The result is &quot;, MyValue := -3.14)
+     MsgBox(var) ; &quot;The result is: -3.14&quot;
     </code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="joinpath">JoinPath</h1>
@@ -368,22 +368,22 @@ JoinPath(Dir, File)
 <h2 class="unlisted unnumbered" id="examples-7">Examples</h2>
 <pre><code>AHK_L:
 
-    f := A_WinDir \&quot;\System32\shell32.dll\&quot;
+    f := A_WinDir &quot;\System32\shell32.dll&quot;
     FileGetAttrib, v, %f%
         MsgBox, %v%
 
-    FileGetAttrib, v, % A_WinDir \&quot;\System32\shell32.dll\&quot;
+    FileGetAttrib, v, % A_WinDir &quot;\System32\shell32.dll&quot;
         MsgBox, %v%
 
  AHKEZ:
 
-    v := A_WinDir \&quot;\System32\shell32.dll\&quot;
+    v := A_WinDir &quot;\System32\shell32.dll&quot;
         MsgBox(v)
 
     attrib := FileGetAttrib(v)
         MsgBox(attrib)
 
-    MsgBox(FileGetAttrib(JoinPath(A_WinDir, \&quot;\System32\shell32.dll\&quot;)))</code></pre>
+    MsgBox(FileGetAttrib(JoinPath(A_WinDir, &quot;\System32\shell32.dll&quot;)))</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="msgbox-mb">MsgBox [MB]</h1>
 <p>MB is an abbreviation for MsgBox().</p>
@@ -398,13 +398,13 @@ MsgBox(Options = "", Title = "", Text = "", Timeout = "")
 
     MsgBox, The result is: %v%
 
-    MsgBox, % \&quot;The result is:\&quot; v
+    MsgBox, % &quot;The result is:&quot; v
 
  AHKEZ:
 
-    MB(\&quot;The result is:\&quot; v)  
+    MB(&quot;The result is:&quot; v)  
     
-    MsgBox(\&quot;The result is:\&quot; v)</code></pre>
+    MsgBox(&quot;The result is:&quot; v)</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="settitlematchmode">SetTitleMatchMode</h1>
 <p>Sets the matching behavior of the WinTitle parameter in Win commands.</p>
@@ -436,9 +436,9 @@ SetTitleMatchMode(MatchMode = "", Speed = "")
 
  AHKEZ:
 
-    SetTitleMatchMode(3, \&quot;Fast\&quot;)  
+    SetTitleMatchMode(3, &quot;Fast&quot;)  
     
-    SetTitleMatchMode(\&quot;Exact\&quot;, \&quot;Fast\&quot;)</code></pre>
+    SetTitleMatchMode(&quot;Exact&quot;, &quot;Fast&quot;)</code></pre>
 <h1 id="splitpath">SplitPath</h1>
 <p>Separates a file name or URL into its name, directory, extension, and drive.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -464,7 +464,7 @@ Obj.Drive</p>
 <h2 class="unlisted unnumbered" id="examples-10">Examples</h2>
 <pre><code>AHK_L:
 
-    FullFileName := \&quot;C:\My Documents\Address List.txt\&quot;  
+    FullFileName := &quot;C:\My Documents\Address List.txt&quot;  
     SplitPath, FullFileName, name, dir, ext, name_no_ext, drive
 
     ; The above will set the variables as follows:  
@@ -480,9 +480,9 @@ Obj.Drive</p>
     MsgBox(Obj.FileName)  
     
     v := SplitPath(FullFileName).FileName  
-    MsgBox(\&quot;FileName: \&quot; v)
+    MsgBox(&quot;FileName: &quot; v)
     
-    MsgBox(SplitPath(JoinPath(A_WinDir, \&quot;\System32\shell32.dll\&quot;)).FileName)</code></pre>
+    MsgBox(SplitPath(JoinPath(A_WinDir, &quot;\System32\shell32.dll&quot;)).FileName)</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="strcontains">StrContains</h1>
 <p>Searches for a given occurrence of a string, from the left or the right.</p>
@@ -499,12 +499,12 @@ StrContains(Haystack, Needle, CaseSensitive = false, StartingPos = 1, Occurrence
 <h2 class="unlisted unnumbered" id="examples-11">Examples</h2>
 <pre><code>AHK_L:
 
-    MsgBox % InStr(\&quot;123abc789\&quot;, \&quot;abc\&quot;) ; Returns 4
+    MsgBox % InStr(&quot;123abc789&quot;, &quot;abc&quot;) ; Returns 4
 
  AHKEZ:
 
-    MsgBox(StrContains(\&quot;123abc789\&quot;, \&quot;abc\&quot;)) ; Returns True = 1
-    MsgBox(StrContains(\&quot;123abc789\&quot;, \&quot;def\&quot;)) ; Returns False = 0</code></pre>
+    MsgBox(StrContains(&quot;123abc789&quot;, &quot;abc&quot;)) ; Returns True = 1
+    MsgBox(StrContains(&quot;123abc789&quot;, &quot;def&quot;)) ; Returns False = 0</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="strderef">StrDeRef</h1>
 <p>Expands variable references and escape sequences contained inside other variables.</p>
@@ -516,13 +516,13 @@ StrDeRef(String)
 <h2 class="unlisted unnumbered" id="examples-12">Examples</h2>
 <pre><code>AHK_L:
 
-    var1 := \&quot;abc\&quot;
+    var1 := &quot;abc&quot;
     var2 := 123
-    MsgBox % StrDeref(\&quot;%var1%def%var2%\&quot;)  ; Reports abcdef123
+    MsgBox % StrDeref(&quot;%var1%def%var2%&quot;)  ; Reports abcdef123
 
  AHKEZ:
  
-    MsgBox(StrDeref(\&quot;%var1%def%var2%\&quot;))  ; Reports abcdef123</code></pre>
+    MsgBox(StrDeref(&quot;%var1%def%var2%&quot;))  ; Reports abcdef123</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="strendswith">StrEndsWith</h1>
 <p>Searches for a given occurrence of a string, from the right to the left.</p>
@@ -539,12 +539,12 @@ StrEndsWith(Haystack, Needle, CaseSensitive := False, Occurrence = 1)
 <h2 class="unlisted unnumbered" id="examples-13">Examples</h2>
 <pre><code>AHK_L:
 
-    String := \&quot;The Quick Brown Fox Jumps Over the Lazy Dog\&quot;
-    MsgBox % SubStr(String, -7)  ; Returns \&quot;Lazy Dog\&quot;
+    String := &quot;The Quick Brown Fox Jumps Over the Lazy Dog&quot;
+    MsgBox % SubStr(String, -7)  ; Returns &quot;Lazy Dog&quot;
 
  AHKEZ:
  
-    MsgBox(StrEndsWith(String, \&quot;Lazy Dog\&quot;))  ; Reports True = 1</code></pre>
+    MsgBox(StrEndsWith(String, &quot;Lazy Dog&quot;))  ; Reports True = 1</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="strsstartswith">StrsStartsWith</h1>
 <p>Searches for a given occurrence of a string, from the left to the right.</p>
@@ -561,16 +561,16 @@ StrStartsWith(Haystack, Needle, CaseSensitive := False, Occurrence = 1)
 <h2 class="unlisted unnumbered" id="examples-14">Examples</h2>
 <pre><code>AHK_L:
 
-    String := \&quot;The Quick Brown Fox Jumps Over the Lazy Dog\&quot;
-    MsgBox % InStr(String, \&quot;The Quick\&quot;) ; Returns 1
+    String := &quot;The Quick Brown Fox Jumps Over the Lazy Dog&quot;
+    MsgBox % InStr(String, &quot;The Quick&quot;) ; Returns 1
 
  AHKEZ:
  
-    MsgBox(StrStartsWith(String, \&quot;The Quick\&quot;)) ; Reports True = 1</code></pre>
+    MsgBox(StrStartsWith(String, &quot;The Quick&quot;)) ; Reports True = 1</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="donations">Donations</h1>
 <p><a href="https://www.paypal.me/JimDreherHome"><img src="https://img.shields.io/badge/Buy_me_a_cup_of_Coffee-PayPal-red.svg" alt="Donate" /></a></p>
-<p>If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the "donation" button above. Thank you.</p>
+<p>If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the donation button above. Thank you.</p>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
 <div id="footer">
 	Dedicated to the public domain without warranty or liability (CC0 1.0) <http://creativecommons.org/publicdomain/zero/1.0/>
