@@ -29,13 +29,13 @@ Links: [Autohotkey Home](https://autohotkey.com/) and: [Autohotkey on GitHub](ht
 
 1. Most commands have Function() wrappers that minimize the confusion of using percent signs (%var%)
 1. Most Gui commands have Gui() wrappers intended for quick creation of simple Guis
-1. AHKEZ adds several functions, see Lib\AHKEZ_API.ahk
+1. AHKEZ adds several functions, see Lib\AHKEZ_API.ahk and [AHKEZ docs](https://jasc2v8.github.io/AHKEZ/)
 
 # AHKEZ Featured Items #
 
 1. AHKScripts - checkout the \Gui_Templates and the \Tools
 1. Doc - notes and manuals
-1. Lib - the AKEZ.ahk and other library scripts
+1. Lib - the AKEZ.ahk and other library scripts, especially AHKEZ_Debug.ahk
 1. UnitTest - checkout Run_Tests.ahk for tests and examples
 
   I can **highly** recommend the use of VSCode as an IDE for Autohotkey! I've documented A few easy steps to setup VSCode and a modified version of QuickLinks that is launched when VSCode starts.  VSCode has virtually everything and QuickLinks will launch AHK-specific tools.
