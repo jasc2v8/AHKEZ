@@ -1,5 +1,5 @@
 ----------------------------------------------------------------  
- VSCode WORKFLOW with built-in Git and GitHub Pull Request Extension
+ VS WORKFLOW with built-in Git and GitHub Pull Request Extension
 ---------------------------------------------------------------- 
 Create repo on github
 Clone the Repo to local machine

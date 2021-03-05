@@ -1,10 +1,11 @@
-2021-03-02-11:06:AM
+2021-03-05_11:16:AM
 
 VSCode 1.53.2
 	https://code.visualstudio.com/
 
-Settings folder:
-	C:\Users\USERNAME\.vscode\extensions
+Settings folders (backup these folders):
+	C:\Users\USERNAME\AppData\Roaming\Code (VSCode Settings)
+	C:\Users\USERNAME\.vscode\ (Extensions)
 	
 Disable the [annoying] Output Window by adding the following code to out.js:
 	C:\Users\USER\.vscode\extensions\mark-wiemer.vscode-autohotkey-plus-plus-2.7.1\out\common\out.js
@@ -20,6 +21,13 @@ Additional
 
 Workspace Settings
 	D:\Software\DEV\Work\AHK\.vscode\tasks.json
+	
+Reset all settings
+	Close Visual Studio Code
+	Rename C:\Users\USERNAME\.vscode to something else
+	Rename C:\Users\USERNAME\AppData\Roaming\Code to something else
+	Restore C:\Users\USER\.vscode\extensions\ from backups
+	Reopen Visual Studio Code
 
 Extensions
 	Around 0.4.1							(See Settings below)
