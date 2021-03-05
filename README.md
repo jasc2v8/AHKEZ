@@ -18,7 +18,7 @@ Links: [Autohotkey Home](https://autohotkey.com/) and: [Autohotkey on GitHub](ht
 
 # How to Use #
 
-1. Copy Lib\AHKEZ.ahk to your [AHK Library folder](https://www.autohotkey.com/docs/Functions.htm#lib)
+1. Copy [Lib\AHKEZ.ahk](https://github.com/jasc2v8/AHKEZ/blob/main/Lib/AHKEZ.ahk) to your [AHK Library folder](https://www.autohotkey.com/docs/Functions.htm#lib)
 1. Try the [Hello World](https://github.com/jasc2v8/AHKEZ/blob/main/AHKScripts/Examples/HelloWorld.ahk) example
 1. Copy Lib\AHKEZ_API.ahk for use as a reference doc
 1. Add the following at the top of your AHK script: `#Include <AHKEZ>`
