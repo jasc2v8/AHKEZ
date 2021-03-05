@@ -1,4 +1,3 @@
-[![Donate](https://img.shields.io/badge/Buy_me_a_cup_of_Coffee-PayPal-red.svg)](https://www.paypal.me/JimDreherHome)
 
 # AHKEZ
 
@@ -13,9 +12,9 @@ AutoHotkey EZ is a free and open source version of AutoHotkey_L_v1.1.33.02
 
 ## AutoHotkey_L ##
 
-    AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
+AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
     
-  Links: https://autohotkey.com/ and: https://github.com/Lexikos/AutoHotkey_L
+Links: https://autohotkey.com/ and: https://github.com/Lexikos/AutoHotkey_L
 
 # How to Use #
 
@@ -54,6 +53,7 @@ I love AHK but I want to use it to write code without trying to remember the syn
 
 # Donations #
 
-If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the "donation" button above. Thank you.
+If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the "donation" button below. Thank you.
 
+[![Donate](https://img.shields.io/badge/Buy_me_a_cup_of_Coffee-PayPal-red.svg)](https://www.paypal.me/JimDreherHome)
 
