@@ -1,7 +1,7 @@
 
 # AHKEZ
 
-AutoHotkey EZ is a free and open source version of AutoHotkey_L_v1.1.33.02
+AutoHotkey EZ is a free and open source Library for AutoHotkey_L_v1.1.33.02
 
 ## Objectives ##
 
@@ -41,9 +41,9 @@ Links: [Autohotkey Home](https://autohotkey.com/) and: [Autohotkey on GitHub](ht
 
   I can **highly** recommend the use of VSCode as an IDE for Autohotkey! I've documented A few easy steps to setup VSCode and a modified version of QuickLinks that is launched when VSCode starts.  VSCode has virtually everything and QuickLinks will launch AHK-specific tools.
 
-    \AHKScripts\IDE\VSCode\VSCode_manual.txt
+    \Docs\IDE\VSCode\VSCode_manual.txt
 
-# Why another version of AutoHotkey? #
+# Why AHKEZ? #
 
 In summary, this is my 2020 COVID-19 Pandemic Quarantine Project to pass the time until the world can get back to work.
 
