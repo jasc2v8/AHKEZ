@@ -1,35 +1,28 @@
-;2021-03-03_05:24:PM
 if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
-	msgbox % "This file was not #included."
+	MsgBox % "This file was not #included."
 	ExitApp
 }
-
 /*
-TODO:
-
-  FileRead(Filename) { 
-    ; options not supported  - FIX THIS
-
-	Title:  AHKEZ.ahk
-  About:  The standard library for AHKEZ
-  Usage:  #Include <AHKEZ>
-          #Include library locations: https://www.autohotkey.com/docs/Functions.htm#lib
+	======================================================================================================================
+	Title:  	AHKEZ.ahk
+  About:  	The standard library for AHKEZ
+  Usage:  	#Include <AHKEZ>
+  GitHub: 	https://github.com/jasc2v8/AHKEZ
+	Version:	0.1.0/2021-03-04_11:30:PM/jasc2v8
+						AHK_L_v1.1.10.01 (U64)
 	Credits:
 		Functions.ahk Version 1.41 <http://www.autohotkey.net/~polyethene/#functions>
-	Legal:  Dedicated to the public domain (CC0 1.0) <http://creativecommons.org/publicdomain/zero/1.0/>
-  Notes:
-    The objective for AHKEZ is to make Autohotkey:
-    1.  Approachable, Easy, Effective, and Fun to use for programmers of all skill levels and languages
-    3.  Minimize the confusion when to use variable or %variable% with percent signs (%)
-    4.  Embrace the design objectives for Autohotkey which is
-        , not a full-blown programming language for time sensitive or critical applications
-        , but extremely extendable and more powerful than just a scripting language!
-  
-  Includes:
-    - Globals
-    - Helper Functions
-    - Function and Command Wrappers
-    - AHKEZ_GUI
+  Objectives:
+    1. Promote the use of Autohotkey for programmers of all skill levels and languages
+    2. Make Autohotkey **Easy**, Effective, and Fun to use 
+    3. Minimize the confusion when to use percent signs: `variable` or `%variable%` ?
+    4. For AHK_L_v1.1 only, I have no plans to update for the forthcoming AHL_L_v2
+	License:
+		Public Domain: https://creativecommons.org/publicdomain/zero/1.0/
+	======================================================================================================================
+	This software is provided 'as-is', without any express or implied warranty.
+	In no event will the authors be held liable for any damages arising from the use of this software.
+	======================================================================================================================
 */
 ;
 ;Globals
@@ -281,12 +274,6 @@ FileSetAttrib(Attributes = "", FilePattern = "", OperateOnFolders = "", Recurse 
 FileSetTime(YYYYMMDDHH24MISS = "", FilePattern = "", WhichTime = "", OperateOnFolders = "", Recurse = "") {
 	FileSetTime, %YYYYMMDDHH24MISS%, %FilePattern%, %WhichTime%, %OperateOnFolders%, %Recurse%
 }
-/**
-	Title : FileWrite
-	About :	Writes text to a file with option to overwrite
-	Params:	Text, Filename, Overwrite = 0/1, Encoding
-	Return:	None
-*/
 FileWrite(Text = "", Filename = "", Overwrite = 0, Encoding = "") {
   If (Overwrite)
      FileDelete(Filename)
@@ -362,10 +349,10 @@ InputBox(Title = "", Prompt = "", HIDE = "", Width = "", Height = "", X = "", Y 
 }
 IsBlank(var) {
 	Return RegExMatch(var, "^[\s]+$")
-}
+} ;Custom
 IsEmpty(var) {
 	Return (var = "")
-}
+} ;Custom
 ;IsObject() built-in
 IsType(ByRef var, type) {
   if (type = "array") {
@@ -385,17 +372,17 @@ IsType(ByRef var, type) {
   Return False
 }
 Join(Separator, params*) {
+  v := ""
   if IsType(Separator, "integer") {
-    v := ""
     Loop, %Separator%
     {
       v .= params.1
     }
     Return v
   }
-  for index, param in params
-    string .= Trim(param) . Trim(Separator)
-  return string
+  for index, p in params
+    v .= p . Separator
+  return v
 } ; MsgBox % Join("`n", "one", "two", "three") ; MsgBox % ">" Join(5, "X") "<"
 JoinPath(Dir, File) {
   Dir := Trim(Dir)
@@ -439,6 +426,8 @@ MB(Options = "", Title = "", Text = "", Timeout = "") {
 MsgBox(Options = "", Title = "", Text = "", Timeout = "") {
   if (Options . Title . Text . Timeout = "" ) {
     MsgBox, 0, PAUSE, Press OK to continue.
+  } else if (Title . Text . Timeout = "") {
+    MsgBox, %Options%
   } else if (Options=0) Or (Options="") {
     MsgBox, 0, %Title%, %Text%, %Timeout%
   } else if (SubStr(Options,1,2)="0x") {
@@ -547,24 +536,26 @@ SetStoreCapsLockMode(OnOff) {
 SetTimer(Label = "", PeriodOnOffDelete = "", Priority = "") {
   SetTimer, %Label%, %PeriodOnOffDelete%, %Priority%
 }
-SetTitleMatchMode(Option = "") {
-  if (Option = "") {
-    SetTitleMatchMode, 1
-    SetTitleMatchMode, fast
-    Return
-  }
-  if IsType(Option, "Alpha") {
-    Switch Option
+SetTitleMatchMode(MatchMode = "", Speed = "") {
+  if !IsEmpty(MatchMode) {
+    Switch MatchMode
     {
-      Case "fast":      Option := Option
-      Case "slow":      Option := Option
       Case "starts":    Option := 1
       Case "contains":  Option := 2
       Case "exact":     Option := 3
+      Default:          Option := 1
+    }
+    SetTitleMatchMode, %Option%
+  }
+  if !IsEmpty(Speed) {
+    Switch Speed
+    {
+      Case "fast":      Option := Speed
+      Case "slow":      Option := Speed
       Default:          Option := "fast"
     }
+    SetTitleMatchMode, %Option%    
   }
-  SetTitleMatchMode, %Option%
 }
 SetWinDelayDelay(Delay) {
   SetWinDelay, %Delay%
@@ -601,8 +592,8 @@ SoundSet(NewSetting, ComponentType = "", ControlType = "", DeviceNumber = "") {
 SoundSetWaveVolume(Percent , DeviceNumber = "") {
   SoundSetWaveVolume, %Percent%, %DeviceNumber%
 }
-SplitPath(File = "") {
-	SplitPath, File, FileName, Dir, Ext, NameNoExt, Drive
+SplitPath(Path = "") {
+	SplitPath, Path, FileName, Dir, Ext, NameNoExt, Drive
 	Return ({"FileName": FileName, "Dir": Dir, "Ext": Ext, "NameNoExt": NameNoExt, "Drive": Drive})
 } ; SplitPathObj(Filename).NameNoExt
 StatusBarGetText(Part = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "") {
@@ -612,28 +603,8 @@ StatusBarGetText(Part = "", WinTitle = "", WinText = "", ExcludeTitle = "", Excl
 StatusBarWait(BarText = "", Timeout = "", Part# = "", WindowID = "") {
   StatusBarWait, %BarText%, %Timeout%, %Part#%, ahk_id %WindowID%
 }
-StrBetween(Haystack = "", OpenNeedle = "", CloseNeedle = "", IncludeNeedles = False, CaseSensitive := False, OpenNeedleOccurrence = 1, CloseNeedleOccurrence = 1) {
-	If (!OpenNeedle)
-		Return
-	OpenPos := InStr(Haystack, OpenNeedle, CaseSensitive, 1, OpenNeedleOccurrence)
-	If (!OpenPos)
-		Return
-	OpenLen := StrLen(OpenNeedle)
-	If (!CloseNeedle)
-		Return
-	ClosePos := InStr(Haystack, CloseNeedle, CaseSensitive, OpenPos + OpenLen, CloseNeedleOccurrence)
-	If (!ClosePos)
-		Return
-	StartingPos := OpenPos + OpenLen
-	Length := ClosePos - OpenPos - OpenLen
-	if (IncludeNeedles) {
-		StartingPos -= 1
-		Length += 2
-	}
-	Return SubStr(Haystack, StartingPos, Length)
-}
 StrContains(Haystack, Needle, CaseSensitive = false, StartingPos = 1, Occurrence = 1) {
-	Return Instr(Haystack, Needle, CaseSensitive, StartingPos,Occurrence) > 0
+	Return Instr(Haystack, Needle, CaseSensitive, StartingPos, Occurrence) > 0
 }
 StrDeRef(String)
 {
@@ -875,7 +846,7 @@ Gui(SubCommand = "New", Value1 = "", Value2 = "", Value3 = "") {
     Gui, %subCommand%, %Value1%, %Value2%, %Value3%
     Return
   }
-
+	
   ;Gui, +/-Option1 +/-Option2 ...
   ;Gui, SubCommand , Value1, Value2, Value3
   ;no gui options with first char to match

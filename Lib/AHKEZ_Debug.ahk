@@ -1,19 +1,17 @@
-﻿;2021-02-28 Remove AutoXYWH
-if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
-	msgbox % "This file was not #included."
+﻿if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
+	MsgBox % "This file was not #included."
 	ExitApp
 }
 /*
 	======================================================================================================================
-	Name:
-		AHKEZ_Debug.ahk
-	Description:
-		Shows a window to display debug information while script is running
-		Search for Help_Pages: below for declaration, options, and functions
-	AHK version: 1.1.10.01 (U64)
-	Script version: 1.0.0/2021-03-02/jasc2v8
-	Version history:
-		0.0.24/2021-02-28/jasc2v8
+	Title:  	AHKEZ_Debug.ahk
+  About:  	A window to display debug information while testing a script
+						A very useful ListVars() function at the bottom of this script
+						Search below for Help_Pages for declaration, options, and functions
+  Usage:  	#Include <AHKEZ_Debug>
+  GitHub: 	https://github.com/jasc2v8/AHKEZ
+	Version:	0.1.0/2021-03-04_11:45:PM/jasc2v8
+						AHK_L_v1.1.10.01 (U64)
 	Credits:
 		Class encapsulation of the Gui with event handling: https://www.autohotkey.com/boards/viewtopic.php?t=68912
 	License:
