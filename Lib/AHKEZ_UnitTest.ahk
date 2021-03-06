@@ -12,7 +12,7 @@
            AHK_L_v1.1.10.01 (U64)
   Notes:
     Use with Run_Tests.ahk
-  License:
+  License: 
     Public Domain: https://creativecommons.org/publicdomain/zero/1.0/
  ======================================================================================================================
  This software is provided 'as-is', without any express or implied warranty.
