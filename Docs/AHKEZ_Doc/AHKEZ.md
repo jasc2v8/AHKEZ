@@ -1,5 +1,5 @@
 
-<!-- reminder: global replace = "" with = \"\" -->
+<!-- reminder: replace = "" with = \"\" -->
 
 ---
 title: AHKEZ
@@ -274,9 +274,9 @@ IsType - Returns True if var is type, else False.
 
 > Type: String  
 >
-> One of the following in quotes: integer, float, number, digit, xdigit, alpha, upper, lower, alnum, space, time, string.
+> One of the following in quotes: integer, float, number, digit, xdigit, alpha, upper, lower, alnum, space, time, string, object.
 >
->Added for AHKEZ is type \"string\" - see Remarks below.
+>Added for AHKEZ is type \"string\" and \"object\".
 
 ## Return Value {.unlisted .unnumbered}
 
@@ -287,8 +287,6 @@ IsType - Returns True if var is type, else False.
 ## Remarks {.unlisted .unnumbered}
 
 Function wrapper for [IfIs](https://www.autohotkey.com/docs/commands/IfIs.htm)  
-
-IfIs(var, \"String\") works in most cases, but not all, because AHK variables can be a string or other type.
 
 ## Examples {.unlisted .unnumbered}
 
@@ -315,7 +313,7 @@ IfIs(var, \"String\") works in most cases, but not all, because AHK variables ca
 
 # Join
 
-Concatenates strings together, or mutiples of the same string.
+Concatenates strings together, or multiples of the same string.
 
 <p style="padding:0.5em;background-color:#ffffaa;">
 Join(Separator, Params*) 
