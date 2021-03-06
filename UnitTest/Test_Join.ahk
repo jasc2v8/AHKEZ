@@ -12,7 +12,10 @@ ListLines, Off
 
 T := New UnitTest()
 
-DEBUG := T.GetOption("Debug") ;DEBUG := True
+DEBUG := T.GetOption("Debug") ;
+DEBUG := True
+
+T.Assert(A_ScriptName, A_Linenumber, False, True)
 
 ;** START TEST
 
