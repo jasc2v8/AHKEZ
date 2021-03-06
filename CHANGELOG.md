@@ -10,3 +10,4 @@
 
   1. Fix: Credit iPhilip: IsType, fix "string", add "object"
   1. Indent with spaces, not tabs
+  
