@@ -1,6 +1,7 @@
 ```diff
-+ # ACCEPTING PULL REQUESTS ON THIS BRANCH - thank you!
-- # ACCEPTING PULL REQUESTS ON THIS BRANCH - thank you!
++ *******************************************************
++ NOWCACCEPTING PULL REQUESTS ON THIS BRANCH - thank you!
++ *******************************************************
 ```
 
 # AHKEZ
