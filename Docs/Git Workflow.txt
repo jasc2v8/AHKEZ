@@ -3,32 +3,33 @@
 ---------------------------------------------------------------- 
 Create repo on github
 Clone the Repo to local machine
-       SC, Clone
+  SC, Clone
 You can make changes to the main branch, or create a new branch
-       The workflow for main is:
-              Make changes, Stage / Commit, Push
-Create new branch (local)
-       SC, Branch, Create
+  The workflow for main is:
+    Make changes, Stage / Commit, Push
+Create new branch
+  (create local branch to avoid origin\branch-name tag)
+  SC, Branch, Create
 Add branch and files to the Remote Repo
-       SC Branch, Publish (on github) (or press the cloud icon)
-       Same as: SC, Push
+  SC Branch, Publish (on github) (or press the cloud icon)
+  Same as: SC, Push
 Make changes to files
 Stage the file for the next Commit
-       SC Changes: right-click, Stage Changes
+  SC Changes: right-click, Stage Changes
 Commit the files
-       SC, Commit (or click large check mark)
+  SC, Commit (or click large check mark)
 Push committed changes to github repo
-       SC, Push (or click up-arrow icon)
+  SC, Push (or click up-arrow icon)
 Create Pull request
-       SC, Pull
-       Merge Pull Request
-       Create Merge Commit 
-       "Pull request successfully merged."
-       Delete branch, local and remote
+  SC, Pull
+  Merge Pull Request
+  Create Merge Commit 
+  "Pull request successfully merged."
+  Delete branch, local and remote
 
 Make sure the local master is up-to-date
-       If changes not in local file explorer:
-	SC, Pull Rebase
+  If changes not in local file explorer:
+	  SC, Pull Rebase
 
 https://towardsdatascience.com/a-simple-git-workflow-for-github-beginners-and-everyone-else-87e39b50ee08
 
@@ -41,13 +42,13 @@ Common console commands:
 
 NOTE: Exit VIM if needed ctrl + c then type :qa! and push enter
 NOTE: If file is not in local repo, manually move the file into 
-       the correct folder (outside of console)
+   the correct folder (outside of console)
 
 --------------------------------------------
  Managing your Local Repo
 --------------------------------------------
 NOTE: If you need to hard reset your local repo to match 
-       the remote master use the following commands:
+   the remote master use the following commands:
  $ git fetch origin
  $ git reset --hard origin/master
  
