@@ -1,6 +1,6 @@
 ```diff
 + *******************************************************
-+ NOWCACCEPTING PULL REQUESTS ON THIS BRANCH - thank you!
++ NOW ACCEPTING PULL REQUESTS ON THIS BRANCH - thank you!
 + *******************************************************
 ```
 
