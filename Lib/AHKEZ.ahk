@@ -6,11 +6,11 @@ if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
   ==================================================================================================
   Title:
     AHKEZ.ahk
-  About:  
+  About:
     The standard library for AHKEZ
-  Usage:  
+  Usage: 
     #Include <AHKEZ>
-  GitHub: 
+  GitHub:
     https://github.com/jasc2v8/AHKEZ
   Version:
     0.1.3/2021-03-05_22:16/iPhilip/fix IsType and added "object"
