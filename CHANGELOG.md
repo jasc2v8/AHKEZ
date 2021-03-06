@@ -8,5 +8,5 @@
 
 ## v0.0.3
 
-  1. Fix IsType, add "object"
+  1. Fix: Credit iPhilip: IsType, fix "string", add "object"
   1. Indent with spaces, not tabs
