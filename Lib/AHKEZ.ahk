@@ -1,3 +1,4 @@
+;2021-03-04_04:42:PM
 if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
 	MsgBox % "This file was not #included."
 	ExitApp
@@ -8,7 +9,8 @@ if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
   About:  	The standard library for AHKEZ
   Usage:  	#Include <AHKEZ>
   GitHub: 	https://github.com/jasc2v8/AHKEZ
-	Version:	0.1.0/2021-03-04_11:30:PM/jasc2v8
+	Version:	0.1.1/2021-03-05_05:48:PM/jasc2v8/Fix Join to omit the Separator after the last Param*
+            0.1.0/2021-03-04_11:30:PM/jasc2v8/Initial Commit
 						AHK_L_v1.1.10.01 (U64)
 	Credits:
 		Functions.ahk Version 1.41 <http://www.autohotkey.net/~polyethene/#functions>
@@ -382,7 +384,7 @@ Join(Separator, params*) {
   }
   for index, p in params
     v .= p . Separator
-  return v
+  return SubStr(v,1,StrLen(v)-StrLen(Separator))
 } ; MsgBox % Join("`n", "one", "two", "three") ; MsgBox % ">" Join(5, "X") "<"
 JoinPath(Dir, File) {
   Dir := Trim(Dir)

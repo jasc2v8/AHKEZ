@@ -1,4 +1,4 @@
-2021-03-05_11:16:AM
+2021-03-05_05:52:PM
 
 VSCode 1.53.2
 	https://code.visualstudio.com/
@@ -6,6 +6,17 @@ VSCode 1.53.2
 Settings folders (backup these folders):
 	C:\Users\USERNAME\AppData\Roaming\Code (VSCode Settings)
 	C:\Users\USERNAME\.vscode\ (Extensions)
+
+Settings (Personal preferences):
+	File > Preferences > Settings
+		Indent with Spaces vs Tabs:
+			Type tabSize in the search bar:
+			Uncheck the checkbox of Detect Indentation
+			Set tabs to 2
+			Note editor will show "Spaces N" in the lower right window
+		Type Font in the search bar:
+			Font Family: Consolas, 'Courier New', monospace
+			Font Size: 14
 	
 Disable the [annoying] Output Window by adding the following code to out.js:
 	C:\Users\USER\.vscode\extensions\mark-wiemer.vscode-autohotkey-plus-plus-2.7.1\out\common\out.js
