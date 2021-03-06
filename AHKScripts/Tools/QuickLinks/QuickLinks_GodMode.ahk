@@ -1,7 +1,6 @@
 ﻿#SingleInstance, force
 /*
-  2021-03-05_07:41:PM/jasc2v8/removed God Mode as I never use it
-  2021-03-03_03:11:PM/jasc2v8/
+  2021-03-03_03:11:PM by jasc2v8
     Add FileDelete, %A_Temp%\aria-debug*.log (apparently from VSCode?)
     Add Pause:: Send ^J to close output window in VSCode (code.exe)
     Add DateFormats yyyy-MM-dd_hh:mm:tt ;My Format - 12hr clock
@@ -111,11 +110,12 @@ IfNotExist, C:\Users\%A_UserName%\QuickLinks\
     FileCreateDir, C:\Users\%A_UserName%\QuickLinks\
 
 IfNotExist, C:\Users\%A_UserName%\QuickLinks\Tools\
-  FileCreateDir, C:\Users\%A_UserName%\QuickLinks\Tools\
+   FileCreateDir, C:\Users\%A_UserName%\QuickLinks\Tools\
 
 ; These two lines add the Windows Tools menu item (God Mode) if missing. Delete if you don't want it.
-;OPTIONAL IfNotExist, C:\Users\%A_UserName%\QuickLinks\Tools Windows\Windows Tools.{ED7BA470-8E54-465E-825C-99712043E01C}
-   ;OPTIONAL FileCreateDir, C:\Users\%A_UserName%\QuickLinks\Tools Windows\Windows Tools.{ED7BA470-8E54-465E-825C-99712043E01C}
+
+IfNotExist, C:\Users\%A_UserName%\QuickLinks\Tools\Windows Tools.{ED7BA470-8E54-465E-825C-99712043E01C}
+   FileCreateDir, C:\Users\%A_UserName%\QuickLinks\Tools\Windows Tools.{ED7BA470-8E54-465E-825C-99712043E01C}
 
 Menu, Tray, Add, Reload QuickLinks, QL_ReloadHandler
 Menu, Tray, Icon, Reload QuickLinks, Shell32.dll, 85  ; Change icon to a menu tree
@@ -182,7 +182,7 @@ Return
 QL_MenuHandler:
 If A_ThisMenuItem contains Windows Tools
    {
-   ; OPTIONAL Run, "C:\Users\%A_UserName%\QuickLinks\%A_ThisMenu%\Windows Tools.{ED7BA470-8E54-465E-825C-99712043E01C}"
+   Run, "C:\Users\%A_UserName%\QuickLinks\%A_ThisMenu%\Windows Tools.{ED7BA470-8E54-465E-825C-99712043E01C}"
    } 
 Else
   {
