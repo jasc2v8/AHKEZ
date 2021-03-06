@@ -13,7 +13,7 @@ if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
   GitHub: 
     https://github.com/jasc2v8/AHKEZ
   Version:
-		0.1.3/2021-03-05_22:16/iPhilip/fix IsType and added "object"
+    0.1.3/2021-03-05_22:16/iPhilip/fix IsType and added "object"
     0.1.2/2021-03-05_19:58/jasc2v8/Indent with spaces not tabs
     0.1.1/2021-03-05_17:48/jasc2v8/Fix Join to omit the Separator after the last Param*
     0.1.0/2021-03-04_23:30/jasc2v8/Initial Commit
