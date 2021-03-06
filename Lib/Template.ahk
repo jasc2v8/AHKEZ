@@ -6,7 +6,7 @@
   GitHub:  https://github.com/jasc2v8/AHKEZ
   Version: 0.1.4/2021-03-06_09:59/jasc2v8
            AHK_L_v1.1.10.01 (U64)
-  Credits: 
+  Credits:
   Notes:
   License:
     Public Domain: https://creativecommons.org/publicdomain/zero/1.0/
