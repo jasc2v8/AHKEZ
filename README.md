@@ -58,4 +58,3 @@ I love AHK but I want to use it to write code without trying to remember the syn
 If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the "donation" button below. Thank you.
 
 [![Donate](https://img.shields.io/badge/Buy_me_a_cup_of_Coffee-PayPal-red.svg)](https://www.paypal.me/JimDreherHome)
-

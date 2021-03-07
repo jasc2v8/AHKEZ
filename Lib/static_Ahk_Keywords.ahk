@@ -204,16 +204,14 @@ ahk_keywords := "
  this base extends __get __set __call __delete __new new
  useunsetlocal useunsetglobal useenv localsameasglobal
  
-)"	
+)"
 
 ahk_keywords_all := ""
-	. ahk_keywords_if_commands
-	. ahk_keywords_flow
-	. ahk_keywords_commands
-	. ahk_keywords_functions
-	. ahk_keywords_directives
-	. ahk_keywords_keys_and_buttons
-	. ahk_keywords_variables
-	. ahk_keywords
-
-	
+  . ahk_keywords_if_commands
+  . ahk_keywords_flow
+  . ahk_keywords_commands
+  . ahk_keywords_functions
+  . ahk_keywords_directives
+  . ahk_keywords_keys_and_buttons
+  . ahk_keywords_variables
+  . ahk_keywords

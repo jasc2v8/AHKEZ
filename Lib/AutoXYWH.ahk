@@ -15,7 +15,7 @@
 ;   AutoXYWH("t x h0.5", "Btn1")
 ; ---------------------------------------------------------------------------------
 ; Version: 2020-5-20 / small code improvements (toralf)
-;	                     https://www.autohotkey.com/boards/viewtopic.php?p=330169#p330169
+;                     https://www.autohotkey.com/boards/viewtopic.php?p=330169#p330169
 ;          2018-1-31 / added a line to prevent warnings (pramach)
 ;          2018-1-13 / added t option for controls on Tab3 (Alguimist)
 ;          2015-5-29 / added 'reset' option (tmplinshi)
@@ -33,7 +33,7 @@ AutoXYWH(DimSize, cList*){
   For i, ctrl in cList {
     ctrlID := A_Gui ":" ctrl
     If !cInfo.hasKey(ctrlID) {
-      ix := iy := iw := ih := 0	
+      ix := iy := iw := ih := 0
       GuiControlGet i, %A_Gui%: Pos, %ctrl%
       MMD := InStr(DimSize, "*") ? "MoveDraw" : "Move"
       fx := fy := fw := fh := 0
