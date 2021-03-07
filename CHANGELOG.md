@@ -3,8 +3,11 @@
 
 ## v0.0.4-wip
 
-  1. Lib\Template.ahk: Indent with spaces, not tabs
-  1. Lib\AHKEZ_UnitTest.ahk: MB(x,"FAIL (Copied to Clipboard)", msg)
+  1. Fix: MsgBox() didn't work as expected.
+  1. Fix: Lib\Template.ahk: Indent with spaces, not tabs
+  1. Add: Lib\AHKEZ_UnitTest.ahk: Add GetSaveWinText()
+  1. Add: UnitTest\Test_MsgBox.ahk
+
 
 ## v0.0.3
 

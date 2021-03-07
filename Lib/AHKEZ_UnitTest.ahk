@@ -3,17 +3,18 @@
  ExitApp
 }
 /*
-  ======================================================================================================================
-  Title:   AHKEZ_UnitTest.ahk
-  About:   Unit testing for AHKEZ
-  Usage:   #Include <AHKEZ_UnitTest>
-  GitHub:  https://github.com/jasc2v8/AHKEZ
-  Version: 0.1.4/2021-03-06_10:03/jasc2v8
-           AHK_L_v1.1.10.01 (U64)
+ ======================================================================================================================
+ Title:   AHKEZ_UnitTest.ahk
+  About:  Unit testing for AHKEZ
+  Usage:  #Include <AHKEZ_UnitTest>
+  GitHub: https://github.com/jasc2v8/AHKEZ
+ Version: 0.1.1/2021-03-07_14:44/jasc2v8/add GetSavedWinText()/Text saved from window before SendKey _OnTick
+          0.1.0/2021-03-04_23:48/jasc2v8/initial commit
+      AHK_L_v1.1.10.01 (U64)
   Notes:
     Use with Run_Tests.ahk
-  License: 
-    Public Domain: https://creativecommons.org/publicdomain/zero/1.0/
+ License:
+  Public Domain: https://creativecommons.org/publicdomain/zero/1.0/
  ======================================================================================================================
  This software is provided 'as-is', without any express or implied warranty.
  In no event will the authors be held liable for any damages arising from the use of this software.
@@ -27,7 +28,7 @@ SetBatchLines, -1
 ListLines, Off
 #SingleInstance, Force
 #Include <AHKEZ>
-#Include <AHKEZ_debug>
+#Include <AHKEZ_Debug>
 ; ** Start Auto-execute Section
 
 /*
@@ -70,8 +71,8 @@ Class UnitTest {
    this.LogBuffer  := ""
    this.PassBuffer := ""
    this.FailBuffer := ""
+   this.SavedWinText    := ""
 
- 
   }
   
  Run(ScriptFileList) {
@@ -194,14 +195,19 @@ Class UnitTest {
   Return
  }
 
+ GetSavedWinText() {
+   Return this.SavedWinText
+ }
+
  StartSendKeyTimer(Duration, Keys = "{Enter}") {
   this.timer.Duration := IsEmpty(Duration) ? this.timer.Duration : Duration
   this.timer.SendKeys := IsEmpty(Keys)     ? this.timer.SendKeys : Keys
-   SetTimer(this.timer.Timer, this.timer.Duration)
+  SetTimer(this.timer.Timer, this.timer.Duration)
  }
 
  _OnTick() {
   SetTimer(this.timer.Timer,"Off")
+  this.SavedWinText := WinGetText("A")
   Send(this.timer.SendKeys)
  }
 

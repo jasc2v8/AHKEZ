@@ -6,14 +6,14 @@ if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
   ==================================================================================================
   Title:
     AHKEZ.ahk
-  About:
+  About:  
     The standard library for AHKEZ
-  Usage: 
+  Usage:  
     #Include <AHKEZ>
-  GitHub:
+  GitHub: 
     https://github.com/jasc2v8/AHKEZ
   Version:
-    0.1.3/2021-03-05_22:16/iPhilip/fix IsType and added "object"
+		0.1.3/2021-03-05_22:16/iPhilip/fix IsType and added "object"
     0.1.2/2021-03-05_19:58/jasc2v8/Indent with spaces not tabs
     0.1.1/2021-03-05_17:48/jasc2v8/Fix Join to omit the Separator after the last Param*
     0.1.0/2021-03-04_23:30/jasc2v8/Initial Commit
@@ -426,14 +426,19 @@ MB(Options = "", Title = "", Text = "", Timeout = "") {
   MsgBox(Options, Title, Text, Timeout)
 }
 MsgBox(Options = "", Title = "", Text = "", Timeout = "") {
+  IsString := IsType(Options, "string")
+  IsXdigit := IsType(Options, "xdigit")
   if (Options . Title . Text . Timeout = "" ) {
-    MsgBox, 0, PAUSE, Press OK to continue.
+    MsgBox, 0, , Press OK to continue.
   } else if (Title . Text . Timeout = "") {
     MsgBox, %Options%
   } else if (Options=0) Or (Options="") {
     MsgBox, 0, %Title%, %Text%, %Timeout%
-  } else if (SubStr(Options,1,2)="0x") {
-    MsgBox, % Options, %Title%, %Text%, %Timeout%
+  } else if (IsString) {
+      concat := Options . Title . Text . Timeout
+      MsgBox, %concat%
+  } else if (IsXdigit) {
+      MsgBox, % Options, %Title%, %Text%, %Timeout%
   }
 }
 OutputDebug(Text) {
