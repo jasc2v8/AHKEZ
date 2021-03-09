@@ -2,6 +2,8 @@ if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
   MsgBox % "This file was not #included."
   ExitApp
 }
+#Include <AHKEZ_DEBUG>
+
 /*
   ==================================================================================================
   Title:
@@ -13,6 +15,10 @@ if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
   GitHub: 
     https://github.com/jasc2v8/AHKEZ
   Version:
+		0.1.6/2021-03-09_13:25/jasc2v8/add Gui, Add, Custom
+		0.1.5/2021-03-09_06:30/jasc2v8/fix IsType, no valid test for "array" in AHK_L_v1 so remove it
+		0.1.5/2021-03-08_12:45/jasc2v8/fix Removed GuiCommand, fix Gui New from GuiCommand to SubCommand
+		0.1.4/2021-03-07_16:39/jasc2v8/fix Gui Tab subcommand
 		0.1.3/2021-03-05_22:16/iPhilip/fix IsType and added "object"
     0.1.2/2021-03-05_19:58/jasc2v8/Indent with spaces not tabs
     0.1.1/2021-03-05_17:48/jasc2v8/Fix Join to omit the Separator after the last Param*
@@ -363,15 +369,13 @@ IsEmpty(var) {
 } ;Custom
 ;IsObject() built-in
 IsType(ByRef var, type) {
-   if (type = "object")
-      Return IsObject(var)
-   if (type = "array") 
-      Return (var.Length() >= 0)
-   if (type = "string")
-      Return ObjGetCapacity([var], 1) != ""
-   if var is %type%
-      Return true
-   Return false
+  if (type = "object")
+    Return IsObject(var)
+  if (type = "string")
+    Return ObjGetCapacity([var], 1) != ""
+  if var is %type%
+    Return true
+  Return false
 }
 Join(Separator, params*) {
   v := ""
@@ -435,10 +439,10 @@ MsgBox(Options = "", Title = "", Text = "", Timeout = "") {
   } else if (Options=0) Or (Options="") {
     MsgBox, 0, %Title%, %Text%, %Timeout%
   } else if (IsString) {
-      concat := Options . Title . Text . Timeout
-      MsgBox, %concat%
+    concat := Options . Title . Text . Timeout
+    MsgBox, %concat%
   } else if (IsXdigit) {
-      MsgBox, % Options, %Title%, %Text%, %Timeout%
+    MsgBox, % Options, %Title%, %Text%, %Timeout%
   }
 }
 OutputDebug(Text) {
@@ -786,27 +790,23 @@ WinWaitClose(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "") {
   ;match gui options first char
   Static GuiOptNeedle := "iS)(*UCP)([x|y|w|h|c|r|s|q]\d{1})(?<!c0x)"
 
-  ;if "GuiName:" found, combine with SubCommand
-  ; calling code must add trailing colon ":", to the GuiName eg:
-  ; Static GuiName := "DEBUG:"
-  pos := StrContains(Subcommand, ":")
-  Subcommand := Trim(Subcommand)
-  if (pos) {
-    GuiCommand := SubStr(Subcommand, 1, pos) . SubStr(Subcommand, pos + 1)
-  } else {
-    GuiCommand := Subcommand
-  }
-
   ;Gui, Add, ControlType , Options, Text
   ;Gui, SubCommand, Value1, Value2, Value3
   if StrEndsWith(SubCommand, "Add") {
-    controlType := value1
-    options := "+HWNDhID " RegExReplace(Value2, GuiOptNeedle, " $1")
-    text := Value3
-    Gui, %subCommand%, %controlType%, %options%, %text%
-    Return hID
-  }
 
+    ;Gui, Add, Custom, ClassSysIPAddress32 r1 w150 hwndhIPControl gIPControlEvent
+    if (Value1 = "Custom") {
+      Options := "+HWNDhID " Value2
+      Gui, %SubCommand%, %Value1%, %Options%
+      Return hID
+    } else {
+      ControlType := Value1
+      Options := "+HWNDhID " RegExReplace(Value2, GuiOptNeedle, " $1")
+      text := Value3
+      Gui, %SubCommand%, %ControlType%, %Options%, %text%
+      Return hID
+    }
+  }
 
   ;Gui, Color, WindowColor(Default, HtmlName, RGB, % var), ControlColor(Default, HtmlName, RGB, % var)
   ;Gui, SubCommand, Value1, Value2, Value3
@@ -833,7 +833,7 @@ WinWaitClose(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "") {
   if StrEndsWith(SubCommand, "New") {
     Options := "+HWNDhID " RegExReplace(Value1, GuiOptNeedle, " $1") ;note A_Space . "$1"
     Title := Value2
-    Gui, %GuiCommand%, %Options%, %Title%
+    Gui, %SubCommand%, %Options%, %Title%
     Return hID
   }
 
@@ -847,7 +847,7 @@ WinWaitClose(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "") {
     Return hID
   }
 
-  Static GuiSubCommands := "Cancel,Destroy,Flash,Hide,Margin,Minimize,Maximize,Menu,Restore,Submit"
+  Static GuiSubCommands := "Cancel,Destroy,Flash,Hide,Margin,Minimize,Maximize,Menu,Restore,Submit,Tab"
   ;Gui, SubCommand , Value1, Value2, Value3
   if StrContains(GuiSubCommands, SubCommand) {
     Gui, %subCommand%, %Value1%, %Value2%, %Value3%
