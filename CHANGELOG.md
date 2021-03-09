@@ -1,7 +1,7 @@
 
 # AHKEZ Changelog
 
-## v0.1.4
+## v0.1.5
 
   1. Fix: Lib\AHKEZ.ahk
       1. MsgBox() didn't work as expected, fixed
@@ -14,8 +14,13 @@
   1. Add: UnitTest\Test_MsgBox.ahk
   1. Fix: UnitTest\Test_If: Fix per the IsType "string" change above
 
+## v0.1.4
+
+  1. Merged with v0.1.5
+  
 ## v0.1.3
 
   1. Fix: Credit iPhilip: IsType, fix "string", add "object"
   1. Indent with spaces, not tabs
+
   
