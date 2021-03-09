@@ -12,9 +12,30 @@ ListLines, Off
 #Include <AHKEZ_UnitTest>
 ;#Include <AHKEZ_Debug>
 
+/*
+
+
+  IMPORTANT: T.GetSavedWinText() will not work in Debug mode!
+  It requires T.StartSendKeyTimer(TIMER_DURATION) to send keys in the non-debug test mode!
+
+
+Note in AHKEZ.ahk:
+  MsbBox()
+  IsString := IsType(Options, "string")
+  IsXdigit := IsType(Options, "xdigit")
+
+The IsString test must be done before the variable is used otherwise uncertain result.
+The xdigit can be included later, but left here just to be consistent with IsString
+
+*/
+
 T := New UnitTest
 
 ;T.SetOptions("-Debug,+Log")
+
+; MyVar := "51"
+; MB(MyVar, "My Title", "My Text")
+; ExitApp
 
 DEBUG := T.GetOption("Debug") ;DEBUG := False
 
@@ -198,7 +219,8 @@ Test_MsgBox_EZ:
 
   if (!DEBUG)
  	  T.StartSendKeyTimer(TIMER_DURATION)
-  MB(0) 
+  MB(0)
+  ;MsgBox, 0
   T.Assert(A_ScriptName, A_Linenumber, ">" T.GetSavedWinText() "<", ">OK`r`n0`r`n<")
 
   if (!DEBUG)
