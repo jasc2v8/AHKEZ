@@ -73,39 +73,51 @@ T.Assert(A_ScriptName, A_Linenumber, IsEmpty("    "), False)
 
 Test_IsType:
 
+  ;https://www.autohotkey.com/boards/viewtopic.php?f=6&t=87709
+  Test_iPhilip_Object:
+
+  object := {key: "value"}
+  T.Assert(A_ScriptName, A_Linenumber, IsType(object, "object"), True)
+
+  MyString := "String"
+  T.Assert(A_ScriptName, A_Linenumber, IsType(MyString, "string"), True)
+
+  MyStringNumber := "51"
+  T.Assert(A_ScriptName, A_Linenumber, IsType(MyStringNumber, "string"), True)
+
+Test_Array:
+
+  ;no valid test for "array" in AHK_L_v1 so no Function wrapper in AHKEZ
+  ;Workarounds in your code:
+
+	;after creation before adding items:
+	;MaxIndex:=MyArray.MaxIndex() ;blank if empty
+	;Length:=MyArray.Length()	;0 if empty
+
+  MyArray := []
+  T.Assert(A_ScriptName, A_Linenumber, MyArray.Length(), 0)
+  T.Assert(A_ScriptName, A_Linenumber, MyArray.MaxIndex(), "")
+
   MyArray := ["Hello, World!", 4, 3, 2, 1]
   MyArrayCount := MyArray.MaxIndex()
   Sum := 0
   Loop % MyArrayCount
   {
-    ;MsgBox % A_Index ": " MyArray[A_Index]
      Sum += MyArray[A_Index]
   }
-  ;MsgBox % "Sum: " Sum
   T.Assert(A_ScriptName, A_Linenumber, Sum, 10)
-  T.Assert(A_ScriptName, A_Linenumber, IsType(MyArray, "array"), True)
-  T.Assert(A_ScriptName, A_Linenumber, IsType(Sum, "array"), False)
+  T.Assert(A_ScriptName, A_Linenumber, MyArray.Length(), 5)
+  T.Assert(A_ScriptName, A_Linenumber, MyArray.MaxIndex(), 5)
+
+  MyArray := {}
+  T.Assert(A_ScriptName, A_Linenumber, MyArray.Length(), 0)
+  T.Assert(A_ScriptName, A_Linenumber, MyArray.MaxIndex(), "")
 
   MyArray := {1: "Hello, World!", 2: 4, 3: 3, 4: 2, 5: 1}
   ;For key, value in MyArray
     ;MsgBox % key ": " value
-  T.Assert(A_ScriptName, A_Linenumber, IsType(MyArray, "array"), True)
-
-;https://www.autohotkey.com/boards/viewtopic.php?f=6&t=87709
-Test_iPhilip:
-
-  object := {key: "value"}
-  T.Assert(A_ScriptName, A_Linenumber, IsType(object, "object"), True)
-
-  MyArray := ["Hello, World!", 4, 3, 2, 1]
-  T.Assert(A_ScriptName, A_Linenumber, IsType(MyArray, "array"), True)
- 
-  MyArray := []
-  T.Assert(A_ScriptName, A_Linenumber, IsType(MyArray, "array"), True)
-  T.Assert(A_ScriptName, A_Linenumber, IsType([], "array"), True)
-
-  T.Assert(A_ScriptName, A_Linenumber, IsType([], "array"), True)
-  T.Assert(A_ScriptName, A_Linenumber, IsType([], "string"), False)
+  T.Assert(A_ScriptName, A_Linenumber, MyArray.Length(), 5)
+  T.Assert(A_ScriptName, A_Linenumber, MyArray.MaxIndex(), 5)
 
 Gosub Finished
 Escape::
