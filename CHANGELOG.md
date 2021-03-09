@@ -1,6 +1,11 @@
 
 # AHKEZ Changelog
 
+## v0.1.6
+
+  1. Add: Demo\GuiDemo.ahk
+  1. Add: Gui(): Added "Add, Custom"
+
 ## v0.1.5
 
   1. Fix: Lib\AHKEZ.ahk
