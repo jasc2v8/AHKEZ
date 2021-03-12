@@ -10,9 +10,10 @@
            Search below for Help_Pages for declaration, options, and functions
   Usage:   #Include <AHKEZ_Debug>
   GitHub:  https://github.com/jasc2v8/AHKEZ
-  Version: 0.1.1/2021-03-05_22:19/jasc2v8/Indent with spaces not tabs
-           0.1.0/2021-03-04_23:45/jasc2v8
-           AHK_L_v1.1.10.01 (U64)
+  Version:  0.1.2/2021-03-11_17:03/jasc2v8/Fix vTitle in ListVars
+            0.1.1/2021-03-05_22:19/jasc2v8/Indent with spaces not tabs
+            0.1.0/2021-03-04_23:45/jasc2v8
+            AHK_L_v1.1.10.01 (U64)
   Credits:
     Class encapsulation of the Gui with event handling: https://www.autohotkey.com/boards/viewtopic.php?t=68912
   License:
@@ -614,7 +615,7 @@ Gui_Timer_Start:
         Continue
       }
      if (index = 2) And (item != "") {
-       Title := item
+       vTitle := item
        Continue
      }
      if (item.MaxIndex()) {
