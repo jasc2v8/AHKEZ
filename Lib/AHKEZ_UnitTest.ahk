@@ -8,7 +8,8 @@
   About:  Unit testing for AHKEZ
   Usage:  #Include <AHKEZ_UnitTest>
   GitHub: https://github.com/jasc2v8/AHKEZ
- Version: 0.1.1/2021-03-07_14:44/jasc2v8/add GetSavedWinText()/Text saved from window before SendKey _OnTick
+ Version: 0.1.7/2021-03-13_10:51/jasc2v8/change SetOptions plural to SetOption singular
+          1.1.1/2021-03-07_14:44/jasc2v8/add GetSavedWinText()/Text saved from window before SendKey _OnTick
           0.1.0/2021-03-04_23:48/jasc2v8/initial commit
       AHK_L_v1.1.10.01 (U64)
   Notes:
@@ -173,7 +174,7 @@ Class UnitTest {
   Return IniRead(this.IniFile, "OPTIONS", Option, False)
  }
 
- SetOptions(OptionsCSV) {
+ SetOption(OptionsCSV) {
   Loop, Parse, OptionsCSV, CSV
   {
    ;MB(0,,">" Trim(A_LoopField) "<")
