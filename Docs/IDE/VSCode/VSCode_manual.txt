@@ -1,10 +1,11 @@
-2021-03-05_05:52:PM
+2021-03-10_15:41
 
 VSCode 1.53.2
 	https://code.visualstudio.com/
 
 Settings folders (backup these folders):
 	C:\Users\USERNAME\AppData\Roaming\Code (VSCode Settings)
+	C:\Users\USERNAME\AppData\Roaming\Code\User\settings.json (VSCode User Settings)
 	C:\Users\USERNAME\.vscode\ (Extensions)
 
 Settings (Personal preferences):
@@ -17,7 +18,15 @@ Settings (Personal preferences):
 		Type Font in the search bar:
 			Font Family: Consolas, 'Courier New', monospace
 			Font Size: 14
-	
+
+Turn off automatic quick Suggestions:
+  F1, "open user settings", search for editor.quick
+    Editor.QuickSuggestions, Edit in settings.json
+      "editor.quickSuggestions": false,           (won't auto show
+      "editor.suggestOnTriggerCharacters": false, (won't trigger on spacebar)
+      "editor.wordBasedSuggestions": false,       (not sure yet...)
+  You can still type Ctrl+Space to get Suggestions for your language.
+  
 Disable the [annoying] Output Window by adding the following code to out.js:
 	C:\Users\USER\.vscode\extensions\mark-wiemer.vscode-autohotkey-plus-plus-2.7.1\out\common\out.js
     static log(value) {	
