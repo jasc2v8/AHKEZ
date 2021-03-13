@@ -1,8 +1,8 @@
 body {
-    margin: 2em;
+    margin: 1.5em;
     padding-right: 1em;
     padding-left: 1em;
-    max-width: 44em; 
+    max-width: 100%; 
     color: black;
     font-family: Consolas;
     font-size: 100%;
