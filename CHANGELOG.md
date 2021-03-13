@@ -1,6 +1,14 @@
 
 # AHKEZ Changelog
 
+## v0.1.7
+
+  1. Fix: Lib\AHK: Remove FileInstall() as it conflicts with Ahk2exe compilier
+  1. Fix: Lib\UnitTest: Change SetOptions to SetOption
+  1. Add: Lib\Debug: ListArray()
+  1. Add: Docs: Restructured docs
+  1. Add: index.html is now a master index to all docs in \Docs
+
 ## v0.1.6
 
   1. Add: Demo\GuiDemo.ahk
