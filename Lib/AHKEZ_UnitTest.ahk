@@ -32,13 +32,6 @@ ListLines, Off
 #Include <AHKEZ_Debug>
 ; ** Start Auto-execute Section
 
-/*
- Name:  AHKEZ_UnitTest
- About: Simple test framework for AutHotkey V1
- Notes: Instantiated as a class:
-     T := New TestUnit(ScriptName, Options)
-*/
-
 Class UnitTest {
 
     __Delete() {
