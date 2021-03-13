@@ -95,21 +95,6 @@ Sets the size of the Debug window.
 GuiSize(Option)
 </p>
 
-
- {
-    Switch Option
-    {
-      Case 0, "-", "S", "Small", "GuiSizeSmall":
-        WinMove(ahkid(this.gui.hGui),, 1475, 21, 435, 420)
-        this.gui.Size := "Small"
-      Case 1, "+", "L", "Large", "GuiSizeLarge":
-        WinMove(ahkid(this.gui.hGui),, 925, 42, 980, 960)
-        this.gui.Size := "Large"
-      Default:
-        WinMove(ahkid(this.gui.hGui),, 1475, 21, 435, 420)
-        this.gui.Size := "Small"
-
-
 ## Parameters {.unlisted .unnumbered}
 
 ### Option {.unlisted .unnumbered}
