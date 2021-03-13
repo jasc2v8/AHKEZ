@@ -5,7 +5,8 @@
   1 Reads .ini file
   2 If Pandoc path not specified, prompts to select
   3 Prompts for Markdown document
-  4 Runs pandoc to convert markdown to html
+  4 Runs Pandoc to convert markdown to index.html
+    index.html is save to the same folder as the markdown.md doc
   5 Opens index.html in default browser
 
  Escape::
@@ -44,6 +45,8 @@ if IsEmpty(SelectedFile) {
 IniWrite(SelectedFile, IniFile, "SETTINGS", "DOC_MD")
 DocMD := SelectedFile
 
+indexFile := SplitPath(DocMD).Dir "\index.html"
+
 MsgBox 0x24, Table of Contents, Include a Table of Contents?
 
 IfMsgBox Yes, {
@@ -52,8 +55,11 @@ IfMsgBox Yes, {
   toc := " "
 }
 
-RunWait(ComSpec " /c " PandocExe " -s " toc " -c ahk-theme.css -A footer.html " DocMD " -o index.html", , "Hide")
-Run("Open " JoinPath(A_ScriptDir,"index.html"))
+RunWait(ComSpec " /c " PandocExe " -s " toc " -c ahk-theme.css -A footer.html " DocMD " -o " indexFile , , "Hide")
+
+if FileExist(indexFile)
+  Run("Open " indexFile)
+
 ExitApp
 
 Escape::ExitApp

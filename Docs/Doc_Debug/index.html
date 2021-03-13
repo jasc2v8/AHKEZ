@@ -99,18 +99,7 @@ D.Close()
 <p style="padding:0.5em;background-color:#ffffaa;">
 GuiSize(Option)
 </p>
-<p>{
-Switch Option
-{
-Case 0, “-”, “S”, “Small”, “GuiSizeSmall”:
-WinMove(ahkid(this.gui.hGui),, 1475, 21, 435, 420)
-this.gui.Size := “Small”
-Case 1, “+”, “L”, “Large”, “GuiSizeLarge”:
-WinMove(ahkid(this.gui.hGui),, 925, 42, 980, 960)
-this.gui.Size := “Large”
-Default:
-WinMove(ahkid(this.gui.hGui),, 1475, 21, 435, 420)
-this.gui.Size := “Small”</p>
+<p>{ Switch Option { Case 0, “-”, “S”, “Small”, “GuiSizeSmall”: WinMove(ahkid(this.gui.hGui),, 1475, 21, 435, 420) this.gui.Size := “Small” Case 1, “+”, “L”, “Large”, “GuiSizeLarge”: WinMove(ahkid(this.gui.hGui),, 925, 42, 980, 960) this.gui.Size := “Large” Default: WinMove(ahkid(this.gui.hGui),, 1475, 21, 435, 420) this.gui.Size := “Small”</p>
 <h2 class="unlisted unnumbered" id="parameters-1">Parameters</h2>
 <h3 class="unlisted unnumbered" id="option">Option</h3>
 <blockquote>
@@ -196,8 +185,7 @@ Out(Text)
 <p>Appends Text to the Debug Window then waits for User input.</p>
 <p>P is an abbreviation for Pause().</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
-Pause(Text := “Press Resume to continue…”)
-P(Text := “Press Resume to continue…”)
+Pause(Text := “Press Resume to continue…”) P(Text := “Press Resume to continue…”)
 </p>
 <h2 class="unlisted unnumbered" id="remarks-3">Remarks</h2>
 <p>No remarks.</p>
