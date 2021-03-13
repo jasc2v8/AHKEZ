@@ -15,9 +15,9 @@ For all AHK built-in commands and functions see the [AutoHotkey Quick Reference]
 
 # Links to Docs
 
-[AHKEZ ](https://jasc2v8.github.io/AHKEZ/Docs/AHKEZ_Doc/index.html) is the AHKEZ Library.
+[AHKEZ ](https://jasc2v8.github.io/AHKEZ/Docs/Doc_Ahkez/) is the AHKEZ Library.
 
-[AHKEZ_Debug](https://jasc2v8.github.io/AHKEZ/Docs/AHKEZ_Doc_Debug/index.html) A window to display debug information while testing a script.
+[AHKEZ_Debug](https://jasc2v8.github.io/AHKEZ/Docs/Doc_Debug/) A window to display debug information while testing a script.
 
 # Donations
 
