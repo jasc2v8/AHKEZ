@@ -1,4 +1,4 @@
-﻿;2021-03-13_13:02
+﻿;2021-03-14_10:01
 /*
   Converts Markdown document to index.html
 
@@ -28,7 +28,7 @@ Global IniFile := SplitPath(A_ScriptName).NameNoExt . ".ini"
 PandocExe := IniRead(IniFile, "SETTINGS", "PANDOC_EXE", "")
 DocMD     := IniRead(IniFile, "SETTINGS", "DOC_MD", "")
 
-if (PandocExe = "ERROR") {
+if (PandocExe = "ERROR") or !FileExist(PandocExe) {
   SelectedFile := FileSelectFile(Options, A_ScriptDir, "Select Path to your Pandoc.exe file:")
   if IsEmpty(SelectedFile) {
     MB(0x30,"No Selection Made", "No Pandoc file selected, press OK to Exit.")
