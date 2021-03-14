@@ -10,7 +10,9 @@
            Search below for Help_Pages for declaration, options, and functions
   Usage:   #Include <AHKEZ_Debug>
   GitHub:  https://github.com/jasc2v8/AHKEZ
-  Version: 0.1.1/2021-03-05_22:19/jasc2v8/Indent with spaces not tabs
+  Version: 0.1.2/2021-03-11_19:03/jasc2v8/Add ListArray
+           0.1.2/2021-03-11_17:03/jasc2v8/Fix vTitle in ListVars
+           0.1.1/2021-03-05_22:19/jasc2v8/Indent with spaces not tabs
            0.1.0/2021-03-04_23:45/jasc2v8
            AHK_L_v1.1.10.01 (U64)
   Credits:
@@ -614,7 +616,7 @@ Gui_Timer_Start:
         Continue
       }
      if (index = 2) And (item != "") {
-       Title := item
+       vTitle := item
        Continue
      }
      if (item.MaxIndex()) {
@@ -637,4 +639,69 @@ Gui_Timer_Start:
       Return vOut
     }
     MsgBox(0, vTitle, vOut)
-  }
+  } ;End_ListVars
+  
+  ListArray(Options = "", Title = "List Array 2D", Array = "", Gui#="ListArray_") {
+    ;Options: 1=1D Array, 2=2D Array
+    Switch Options {
+      Case "",0,1,"1D":
+        Is1D := True
+      Case 2,"2D":
+        Is2D := True
+      Case Default:
+        Return
+    }
+    if (Is1D) {
+      ListViewHeading := "Key|Value"
+    } else if (Is2D) {
+      ListViewHeading := "Key1|Key2|Value"
+    } else {
+      Return
+    }
+    Gui(Gui# ":Default")
+    Gui("Destroy")
+    Gui("+ToolWindow +AlwaysOnTop +LabelListArray_")
+    Gui("Add", "ListView", "h400 +Multi +AltSubmit +Grid", ListViewHeading)
+    Gui("Add", "Button", "wp h30 gListArray_CopySelected", "Copy Selected")
+    hBtnOK := Gui("Add", "Button", "wp h30", "OK")
+    if (Is1D) {
+      For key, value in Array
+        LV_Add("", key, value)
+    }
+    if (Is2D) {
+      For key1, element in Array
+        For key2, Value in element
+          LV_Add("", key1, key2, value)    
+    }
+    Gui("Show", "AutoSize", Title)
+    ControlSelect(hBtnOK)
+    While (!GuiClosed)
+      Sleep, 100
+    Return
+    ListArray_ButtonOK:
+      Gosub ListArray_Close
+    Return
+    ListArray_CopySelected:
+      Contents=
+      row=
+      Loop {
+        row := LV_GetNext(row)
+        if not row
+          break
+        if (Is1D)
+          LV_GetText(key, row, 1), LV_GetText(value, row, 2), Contents .= key "=" value . "`r`n"
+        if (Is2D)
+          LV_GetText(key1, row, 1), LV_GetText(key2, row, 2), LV_GetText(value, row, 3), Contents .= key1 "," key2 "=" value . "`r`n"
+      }
+      if IsEmpty(Contents) {
+        SoundBeep
+      } else {
+        Clipboard := Contents
+        SoundPlay *64
+      }
+    Return
+    ListArray_Close:
+      GuiClosed := True
+      Gui(Gui# ":Destroy")
+      Return
+  } ;End_ListArray
