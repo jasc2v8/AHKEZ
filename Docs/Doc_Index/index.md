@@ -19,6 +19,8 @@ For all AHK built-in commands and functions see the [AutoHotkey Quick Reference]
 
 [AHKEZ_Debug](https://jasc2v8.github.io/AHKEZ/Docs/Doc_Debug/) A window to display debug information while testing a script.
 
+[AHKEZ_UnitTest](https://jasc2v8.github.io/AHKEZ/Docs/Doc_UnitTest/) A unit test library.
+
 # Donations
 
 [![Donate](https://img.shields.io/badge/Buy_me_a_cup_of_Coffee-PayPal-red.svg)](https://www.paypal.me/JimDreherHome)
