@@ -17,7 +17,11 @@ For all AHK built-in commands and functions see the [AutoHotkey Quick Reference]
 
 [AHKEZ ](https://jasc2v8.github.io/AHKEZ/Docs/Doc_Ahkez/) is the AHKEZ Library.
 
+[AHKEZ_Api](https://jasc2v8.github.io/AHKEZ/Docs/Doc_Api/) A simple one-liner API listing all functions.
+
 [AHKEZ_Debug](https://jasc2v8.github.io/AHKEZ/Docs/Doc_Debug/) A window to display debug information while testing a script.
+
+[AHKEZ_UnitTest](https://jasc2v8.github.io/AHKEZ/Docs/Doc_UnitTest/) A unit test library.
 
 # Donations
 
