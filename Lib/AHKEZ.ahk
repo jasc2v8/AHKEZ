@@ -2,8 +2,6 @@ if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
   MsgBox % "This file was not #included."
   ExitApp
 }
-#Include <AHKEZ_DEBUG>
-
 /*
   ==================================================================================================
   Title:
@@ -15,14 +13,15 @@ if (!A_IsCompiled && A_LineFile == A_ScriptFullPath) {
   GitHub: 
     https://github.com/jasc2v8/AHKEZ
   Version:
+    0.1.7/2021-03-13_07:34/jasc2v8/remove FileInstall() as it conflicts with Ahk2Exe compiler
 		0.1.6/2021-03-09_13:25/jasc2v8/add Gui, Add, Custom
 		0.1.5/2021-03-09_06:30/jasc2v8/fix IsType, no valid test for "array" in AHK_L_v1 so remove it
 		0.1.5/2021-03-08_12:45/jasc2v8/fix Removed GuiCommand, fix Gui New from GuiCommand to SubCommand
 		0.1.4/2021-03-07_16:39/jasc2v8/fix Gui Tab subcommand
 		0.1.3/2021-03-05_22:16/iPhilip/fix IsType and added "object"
-    0.1.2/2021-03-05_19:58/jasc2v8/Indent with spaces not tabs
-    0.1.1/2021-03-05_17:48/jasc2v8/Fix Join to omit the Separator after the last Param*
-    0.1.0/2021-03-04_23:30/jasc2v8/Initial Commit
+    0.1.2/2021-03-05_19:58/jasc2v8/indent with spaces not tabs
+    0.1.1/2021-03-05_17:48/jasc2v8/fix Join to omit the Separator after the last Param*
+    0.1.0/2021-03-04_23:30/jasc2v8/initial commit
     AHK_L_v1.1.10.01 (U64)
   Credits:
     Functions.ahk Version 1.41 <http://www.autohotkey.net/~polyethene/#functions>
@@ -244,9 +243,7 @@ FileGetVersion(Filename = "") {
   FileGetVersion, v, %Filename%
   Return, v
 }
-FileInstall(Source, Dest, Overwrite = "") {
-  FileInstall, Source, Dest, %Overwrite%
-}
+;FileInstall: Don't wrap in a Function as it conflicts with Ahk2Exe compiler
 FileMove(SourcePattern = "", DestPattern = "", Overwrite = 0) {
   FileMove, %SourcePattern%, %DestPattern%, %Overwrite%
 }
@@ -813,9 +810,9 @@ WinWaitClose(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "") {
   if StrEndsWith(SubCommand, "Color") {
     Static StripLeading_C_Needle := "iS)(*UCP)^c?(.*)"
     ;Gui, Color doesn't support a leading "c" for colors, strip off if present
-    windowColor  := RegExReplace(Trim(Value1), StripLeading_C_Needle, "$1")
-    controlColor := RegExReplace(Value2, StripLeading_C_Needle, "$1")
-    Gui, %subCommand%, %windowColor%, %controlColor%
+    WindowColor  := RegExReplace(Trim(Value1), StripLeading_C_Needle, "$1")
+    ControlColor := RegExReplace(Value2, StripLeading_C_Needle, "$1")
+    Gui, %SubCommand%, %WindowColor%, %ControlColor%
     Return
   }
 
@@ -842,7 +839,7 @@ WinWaitClose(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "") {
   if StrEndsWith(SubCommand, "Show") {
     Options := RegExReplace(Value1, GuiOptNeedle, " $1") ;note A_Space . "$1"
     Title := Value2
-    Gui, %subCommand%, %options%, %Title%
+    Gui, %SubCommand%, %Options%, %Title%
     hID := WinGetID("A")
     Return hID
   }
@@ -850,7 +847,7 @@ WinWaitClose(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "") {
   Static GuiSubCommands := "Cancel,Destroy,Flash,Hide,Margin,Minimize,Maximize,Menu,Restore,Submit,Tab"
   ;Gui, SubCommand , Value1, Value2, Value3
   if StrContains(GuiSubCommands, SubCommand) {
-    Gui, %subCommand%, %Value1%, %Value2%, %Value3%
+    Gui, %SubCommand%, %Value1%, %Value2%, %Value3%
     Return
   }
 
@@ -858,7 +855,7 @@ WinWaitClose(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "") {
   ;Gui, SubCommand , Value1, Value2, Value3
   ;no gui options with first char to match
   ;Options here are all strings, eg: "+E0x40000 -Theme +Owner"
-  options := SubCommand
+  Options := SubCommand
   Gui, %options%
 
 } ; End_Gui()
