@@ -21,7 +21,7 @@ SetBatchLines, -1
 ListLines, Off
 #SingleInstance, Force
 #Include <AHKEZ>
-;#Include <AHKEZ_Debug>
+#Include <AHKEZ_Debug>
 
 Global IniFile := SplitPath(A_ScriptName).NameNoExt . ".ini"
 
@@ -55,7 +55,13 @@ IfMsgBox Yes, {
   toc := " "
 }
 
-RunWait(ComSpec " /c " PandocExe " -s " toc " -c ahk-theme.css -A footer.html " DocMD " -o " indexFile , , "Hide")
+;temp := PandocExe " -s " toc " -c ahk-theme.css -A footer.html " DocMD " -o " indexFile " "
+
+;ListVars(1,"ListVars", DocMD, indexFile, temp)
+
+;RunWait(ComSpec " /c " PandocExe " -s --toc -c ahk-theme.css -A footer.html AHKEZ.md -o index.html", , "Hide")
+;RunWait(ComSpec " /c " PandocExe " -s " toc " -c ahk-theme.css -A footer.html " DocMD " -o " indexFile, , "Hide")
+RunWait(ComSpec " /c " PandocExe " -s --toc -c ahk-theme.css -A footer.html index.md -o index.html", , "Hide")
 
 if FileExist(indexFile)
   Run("Open " indexFile)

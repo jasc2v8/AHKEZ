@@ -1,5 +1,0 @@
-
-Disable TillaGoto (use SciTE_Goto instead)
-Edit with Admin priv: C:\Program Files\AutoHotkey\SciTE\tillagoto.properties
-Line 12: tillagoto.enable=0
-

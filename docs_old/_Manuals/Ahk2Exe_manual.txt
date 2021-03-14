@@ -1,8 +1,0 @@
-Ahk2Exe is installed with AutoHotkey
-		C:\Program Files\AutoHotkey\Compiler\
-
-Compression
-	Manually download and copy:
-		copy mpress.exe to C:\Program Files\AutoHotkey\Compiler\mpress.exe
-		copy upx.exe    to C:\Program Files\AutoHotkey\Compiler\upx.exe
-
