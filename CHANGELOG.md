@@ -4,6 +4,7 @@
 ## v0.1.8
 
   1. Fix: AHKScripts: Remove old Gui_Input.ahk
+  1. Fix: restructure Docs\index
 
 ## v0.1.7
 
