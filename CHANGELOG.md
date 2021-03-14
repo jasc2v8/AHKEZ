@@ -3,9 +3,12 @@
 
 ## v0.1.8
 
+  1. Add: Docs\Api
   1. Add: Docs\UnitTest
   1. Fix: AHKScripts: Remove old Gui_Input.ahk
-  1. Fix: restructure Docs\index
+  1. Fix: Restructure Docs\index
+  1. Fix: Move manuals to Docs\Manuals
+  1. Fix: Update Api and Api_Index
 
 ## v0.1.7
 
