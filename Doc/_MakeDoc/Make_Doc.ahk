@@ -1,4 +1,4 @@
-﻿;2021-03-14_10:01
+﻿;2021-03-14_12:26
 /*
   Converts Markdown document to index.html
 
@@ -21,13 +21,21 @@ SetBatchLines, -1
 ListLines, Off
 #SingleInstance, Force
 #Include <AHKEZ>
-#Include <AHKEZ_Debug>
+;#Include <AHKEZ_Debug>
 
 Global IniFile := SplitPath(A_ScriptName).NameNoExt . ".ini"
 
 PandocExe := IniRead(IniFile, "SETTINGS", "PANDOC_EXE", "")
 DocMD     := IniRead(IniFile, "SETTINGS", "DOC_MD", "")
 
+if !FileExist("ahk-theme.css") {
+  MB(0x30,"File Not Found", "File Not Found:`n`nahk-theme.css`n`nPress OK to Exit.")
+  Return
+}
+if !FileExist("footer.html") {
+  MB(0x30,"File Not Found", "File Not Found:`n`nfooter.html`n`nPress OK to Exit.")
+  Return
+}
 if (PandocExe = "ERROR") or !FileExist(PandocExe) {
   SelectedFile := FileSelectFile(Options, A_ScriptDir, "Select Path to your Pandoc.exe file:")
   if IsEmpty(SelectedFile) {
@@ -55,13 +63,7 @@ IfMsgBox Yes, {
   toc := " "
 }
 
-;temp := PandocExe " -s " toc " -c ahk-theme.css -A footer.html " DocMD " -o " indexFile " "
-
-;ListVars(1,"ListVars", DocMD, indexFile, temp)
-
-;RunWait(ComSpec " /c " PandocExe " -s --toc -c ahk-theme.css -A footer.html AHKEZ.md -o index.html", , "Hide")
-;RunWait(ComSpec " /c " PandocExe " -s " toc " -c ahk-theme.css -A footer.html " DocMD " -o " indexFile, , "Hide")
-RunWait(ComSpec " /c " PandocExe " -s --toc -c ahk-theme.css -A footer.html index.md -o index.html", , "Hide")
+RunWait(ComSpec " /c " PandocExe " -s " toc " -c ahk-theme.css -A footer.html " DocMD " -o " indexFile , , "Hide")
 
 if FileExist(indexFile)
   Run("Open " indexFile)
