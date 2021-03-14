@@ -1,6 +1,15 @@
 
 # AHKEZ Changelog
 
+## v0.1.8
+
+  1. Fix: AHKScripts: Remove old Gui_Input.ahk
+  1. Fix: restructure Docs\index
+
+## v0.1.7
+
+  1. Fix: Lib\AHK: Remove FileInstall() as it conflicts with Ahk2exe compiler
+=======
 ## v0.1.7
 
   1. Fix: Lib\AHK: Remove FileInstall() as it conflicts with Ahk2exe compilier
