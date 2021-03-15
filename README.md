@@ -1,8 +1,7 @@
 
 
-![Alt vmware](https://github.com/liangxiao3/redhat_note/raw/master/pic/basic_vmware.jpg)
 
-![AHKEZ](https://github.com/jasc2v8/ahkez/raw/master/Doc/res/ahk-keycap-transparent.jpg)
+[[/images/Doc/res/ahk-keycap-transparent.png|AHKEZ]
 
 # AHKEZ
 
