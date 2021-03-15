@@ -3,7 +3,7 @@
 
 [[/images/ahk-keycap.jpg]]
 
-![](../../blob/master/Doc/res/ahk-keycap-transparent.png)
+![](../../blob/master/images/ahk-keycap.jpg)
 
 # AHKEZ
 
