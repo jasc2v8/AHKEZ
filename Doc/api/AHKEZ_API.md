@@ -4,12 +4,16 @@
 ---
 title: AHKEZ_Api
 author: jasc2v8
-date: March 14, 2021
+date: March 15, 2021
 ---
 
 # TOC
 
 The table of contents is listed above.
+
+# About
+
+A simple one-liner API listing all functions in the AHKEZ library.
 
 # A-D
 
@@ -42,6 +46,8 @@ DetectHiddenWindows(OnOff)
 Drive(SubCommand = \"\", Value1 = \"\", Value2 = \"\")  
 DriveGet(SubCommand, Value = \"\")  
 DriveSpaceFree(Path)  
+
+*([TOC])*
 
 # E-H
 
@@ -94,6 +100,8 @@ Gui(SubCommand = \"New\", Value1 = \"\", Value2 = \"\", Value3 = \"\")
 GuiControl(Subcommand = \"\", ControlID = \"\", Value = \"\")  
 GuiControlGet(Subcommand = \"\", ControlID = \"\", Param4 = \"\")  
 
+*([TOC])*
+
 # I-L
 
 IfBetween(ByRef var, LowerBound, UpperBound)  
@@ -117,6 +125,8 @@ KeyWait(KeyName, Options = \"\")
 ListHotkeys()  
 ListLines(OnOff = \"\")  
 
+*([TOC])*
+
 # M-P
 
 Menu(MenuName, SubCommand, Value1 = \"\", Value2 = \"\", Value3 = \"\", Value4 = \"\")  
@@ -131,6 +141,8 @@ PixelGetColor(X, Y, RGB = \"\")
 PixelSearch(ByRef OutputVarX, ByRef OutputVarY, X1, Y1, X2, Y2, ColorID, Variation = \"\", Mode = \"\")  
 PostMessage(Msg, wParam = \"\", lParam = \"\", Control = \"\", WinTitle = \"\", WinText = \"\", ExcludeTitle = \"\", ExcludeText = \"\")  
 Process(SubCommand, PIDOrName = \"\", Value = \"\")  
+
+*([TOC])*
 
 # Q-T
 
@@ -192,6 +204,8 @@ Throw(Expression = \"\")
 ToolTip(Text = \"\", X = \"\", Y = \"\", WhichToolTip = \"\")  
 TrayTip(Title = \"\", Text = \"\", Seconds = \"\", Options = \"\")
 
+*([TOC])*
+
 # U-Z
 
 UrlDownloadToFile(URL, Filename)  
@@ -222,3 +236,5 @@ WinWait(WinTitle = \"\", WinText = \"\", TimeOut = \"\", ExcludeTitle = \"\", Ex
 WinWaitActive(WinTitle = \"\", WinText = \"\", TimeOut = \"\", ExcludeTitle = \"\", ExcludeText = \"\")  
 WinWaitNotActive(WinTitle = \"\", WinText = \"\", TimeOut = \"\", ExcludeTitle = \"\", ExcludeText = \"\")  
 WinWaitClose(WinTitle = \"\", WinText = \"\", ExcludeTitle = \"\", ExcludeText = \"\")  
+
+*([TOC])*

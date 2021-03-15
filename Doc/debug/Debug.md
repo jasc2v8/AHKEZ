@@ -221,7 +221,7 @@ See Append()
 
 # Pause [P]
 
-Appends Text to the Debug Window then waits for User input.
+Appends Text to the Debug Window then waits for User input.  
 
 P is an abbreviation for Pause().
 

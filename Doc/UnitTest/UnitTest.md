@@ -115,6 +115,18 @@ Gets an option setting.
 
 *([TOC])*
 
+# GetSavedWinText
+
+Gets text saved from a window - see StartSendKeyTimer below.
+
+P is an abbreviation for Pause().
+
+<p style="padding:0.5em;background-color:#ffffaa;">
+GetSavedWinText()
+</p>
+
+*([TOC])*
+
 #  SetOption
 
 Sets an option setting.
@@ -143,19 +155,7 @@ See Append()
 
 *([TOC])*
 
-# GetSavedWinText()
-
-Gets text saved from a window - see StartSendKeyTimer below.
-
-P is an abbreviation for Pause().
-
-<p style="padding:0.5em;background-color:#ffffaa;">
-GetSavedWinText()
-</p>
-
-*([TOC])*
-
-# StartSendKeyTimer(Duration, Keys = "{Enter}")
+# StartSendKeyTimer
 
 Save the text in the active window to be retrived late by GetWinText().
 
@@ -167,7 +167,7 @@ StartSendKeyTimer(Duration, Keys = "{Enter}")
 
 ## Parameters {.unlisted .unnumbered}
 
-### Duration {.unlisted .unnumbered}
+### OptionsCSV {.unlisted .unnumbered}
 
 > Type: Integer  
 >
