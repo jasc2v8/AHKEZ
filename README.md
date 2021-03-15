@@ -1,7 +1,7 @@
 
 
 
-[[/images/Doc/res/ahk-keycap-transparent.png|AHKEZ]
+[[/Doc/res/ahk-keycap-transparent.png|AHKEZ]]
 
 # AHKEZ
 
