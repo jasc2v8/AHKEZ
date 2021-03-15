@@ -1,5 +1,5 @@
 
-<img src="images/ahkez-keycap-transparent.png">
+<img src="images/ahkez-keycap-transparent-64.png">
 
 AutoHotkey EZ is a free and open source Library for AutoHotkey_L_v1.1.33.02
 
