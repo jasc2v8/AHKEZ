@@ -5,6 +5,8 @@
 
 ![](../../blob/master/images/ahk-keycap.jpg)
 
+<img src="images/ahk-keycap.jpg">
+
 # AHKEZ
 
 AutoHotkey EZ is a free and open source Library for AutoHotkey_L_v1.1.33.02
