@@ -37,9 +37,9 @@
 <li><a href="#editlog">EditLog</a></li>
 <li><a href="#writelog">WriteLog</a></li>
 <li><a href="#getoption">GetOption</a></li>
+<li><a href="#getsavedwintext">GetSavedWinText</a></li>
 <li><a href="#setoption">SetOption</a></li>
-<li><a href="#getsavedwintext">GetSavedWinText()</a></li>
-<li><a href="#startsendkeytimerduration-keys-enter">StartSendKeyTimer(Duration, Keys = “{Enter}”)</a></li>
+<li><a href="#startsendkeytimer">StartSendKeyTimer</a></li>
 <li><a href="#millisectotime">MillisecToTime</a></li>
 <li><a href="#donations">Donations</a></li>
 </ul>
@@ -106,6 +106,13 @@ GetOption(Option)
 <p>“Debug”, “+Debug”, “-Debug”, “Log”, “+Log”, “-Log” “+Debug, -Log”</p>
 </blockquote>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
+<h1 id="getsavedwintext">GetSavedWinText</h1>
+<p>Gets text saved from a window - see StartSendKeyTimer below.</p>
+<p>P is an abbreviation for Pause().</p>
+<p style="padding:0.5em;background-color:#ffffaa;">
+GetSavedWinText()
+</p>
+<p><em>(<a href="#toc">TOC</a>)</em></p>
 <h1 id="setoption">SetOption</h1>
 <p>Sets an option setting.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -122,21 +129,14 @@ SetOption(OptionsCSV)
 <h2 class="unlisted unnumbered" id="examples-1">Examples</h2>
 <pre><code>D.Out(&quot;Result: &quot; vResult)</code></pre>
 <p><em>(<a href="#toc">TOC</a>)</em></p>
-<h1 id="getsavedwintext">GetSavedWinText()</h1>
-<p>Gets text saved from a window - see StartSendKeyTimer below.</p>
-<p>P is an abbreviation for Pause().</p>
-<p style="padding:0.5em;background-color:#ffffaa;">
-GetSavedWinText()
-</p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
-<h1 id="startsendkeytimerduration-keys-enter">StartSendKeyTimer(Duration, Keys = “{Enter}”)</h1>
+<h1 id="startsendkeytimer">StartSendKeyTimer</h1>
 <p>Save the text in the active window to be retrived late by GetWinText().</p>
 <p>Send a key to the active window, typically used to press the default button to execute a test or close the test window.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
 StartSendKeyTimer(Duration, Keys = “{Enter}”)
 </p>
 <h2 class="unlisted unnumbered" id="parameters-3">Parameters</h2>
-<h3 class="unlisted unnumbered" id="duration">Duration</h3>
+<h3 class="unlisted unnumbered" id="optionscsv-1">OptionsCSV</h3>
 <blockquote>
 <p>Type: Integer</p>
 <p>The duration of the timer in milliseconds.</p>
