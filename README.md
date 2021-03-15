@@ -1,7 +1,7 @@
 
 
 
-[[/Doc/res/ahk-keycap-transparent.png|AHKEZ]]
+[[images/ahk-keycap.jpg]]
 
 ![](../../blob/master/Doc/res/ahk-keycap-transparent.png)
 
