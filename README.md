@@ -3,6 +3,8 @@
 
 [[/Doc/res/ahk-keycap-transparent.png|AHKEZ]]
 
+![](../../blob/master/Doc/res/ahk-keycap-transparent.png)
+
 # AHKEZ
 
 AutoHotkey EZ is a free and open source Library for AutoHotkey_L_v1.1.33.02
