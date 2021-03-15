@@ -3,6 +3,7 @@
 ![Environment](https://img.shields.io/badge/Windows-XP,%20Vista,%207,%208,%2010-brightgreen.svg)
 [![Release](https://img.shields.io/github/release/jasc2v8/AHKEZ.svg)](https://github.com/jasc2v8/AHKEZ/releases)
 ![GitHub all releases](https://img.shields.io/github/downloads/jasc2v8/AHKEZ/total)
+![GitHub forks](https://img.shields.io/github/forks/jasc2v8/AHKEZ)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-red.svg)](https://www.paypal.me/JimDreherHome)
 
 <img src="images/keycap/ahkez-keycap-transparent-128.png"> 
