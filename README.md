@@ -5,7 +5,7 @@
 
 ![](../../blob/master/images/ahk-keycap.jpg)
 
-<img src="images/ahkez-keycap-transparent">
+<img src="images/ahkez-keycap-transparent.png">
 
 # AHKEZ
 
