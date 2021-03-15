@@ -1,4 +1,10 @@
 
+![GitHub](https://img.shields.io/github/license/jasc2v8/AHKEZ)
+![Environment](https://img.shields.io/badge/Windows-XP,%20Vista,%207,%208,%2010-brightgreen.svg)
+[![Release](https://img.shields.io/github/release/jasc2v8/AHKEZ.svg)](https://github.com/jasc2v8/AHKEZ/releases)
+![GitHub all releases](https://img.shields.io/github/downloads/jasc2v8/AHKEZ/total)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-red.svg)](https://www.paypal.me/JimDreherHome)
+
 <img src="images/keycap/ahkez-keycap-transparent-128.png"> 
 
 AutoHotkey EZ is a free and open source Library for AutoHotkey_L_v1.1.33.02
@@ -28,20 +34,22 @@ Links: [Autohotkey Home](https://autohotkey.com/) and: [Autohotkey on GitHub](ht
 
 # AHKEZ Differences from AHK_L #
 
-1. Most commands have Function() wrappers that minimize the confusion of using percent signs (%var%)
+1. Most commands have Function() wrappers that don't require percent signs (%var%)
 1. Most Gui commands have Gui() wrappers intended for quick creation of simple Guis
 1. AHKEZ adds several functions, see Lib\AHKEZ_API.ahk and [AHKEZ docs](https://jasc2v8.github.io/AHKEZ/)
 
 # AHKEZ Featured Items #
 
 1. AHKScripts - checkout the \Gui_Templates and the \Tools
-1. Doc - notes and manuals
+1. Demo - Gui demos using AHKEZ
+1. Doc - html docs
 1. Lib - the AKEZ.ahk and other library scripts, especially AHKEZ_Debug.ahk
+1. Manuals - Notes and guides
 1. UnitTest - checkout Run_Tests.ahk for tests and examples
 
   I can **highly** recommend the use of VSCode as an IDE for Autohotkey! I've documented A few easy steps to setup VSCode and a modified version of QuickLinks that is launched when VSCode starts.  VSCode has virtually everything and QuickLinks will launch AHK-specific tools.
 
-    \Docs\IDE\VSCode\VSCode_manual.txt
+    \Manuals\IDE\VSCode\VSCode_manual.txt
 
 # Why AHKEZ? #
 
