@@ -1,0 +1,89 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.tabSize": 2,
+    "local-history.maxDisplay": 100,
+    "local-history.saveDelay": 60,
+    "cSpell.enabled": true,
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "css",
+        "git-commit",
+        "html",
+        "json",
+        "markdown",
+        "plaintext",
+        "text",
+        "ahk"
+    ],
+    "cSpell.userWords": [
+      "AHKEZ",
+      "Capslock",
+      "Consolas",
+      "HICON",
+      "Hwnd",
+      "SETICON",
+      "Segoe",
+      "Titlebar",
+      "ahkid",
+      "autohotkey",
+      "jasc",
+      "linenumber",
+      "v"
+    ],
+    "around.pairs": {
+        "(": [
+            "(",
+            ")"
+        ],
+        "{": [
+            "{",
+            "}"
+        ],
+        "<": [
+            "<",
+            ">"
+        ],
+        "[": [
+            "[",
+            "]"
+        ],
+        "%": [
+            "%",
+            "%"
+        ],
+        "\"": [
+            "\"",
+            "\""
+        ]
+    },
+    "dupe.openFileAfterCopy": true,
+    "debug.internalConsoleOptions": "neverOpen",
+    "comments.openPanel": "neverOpen",
+    "sync.gist": "1490cb01810d14c15df69b6989ed161d",
+    "githubPullRequests.fileListLayout": "flat",
+    "launch": {
+
+    "inputs": [],
+        "configurations": [],
+        "compounds": []
+    },
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.fontFamily": "consolas",
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "all",
+    "window.zoomLevel": 1,
+      // Configure glob patterns of file paths to exclude from file watching. Patterns must match on absolute paths (i.e. prefix with ** or the full path to match properly). Changing this setting requires a restart. When you experience Code consuming lots of CPU time on startup, you can exclude large folders to reduce the initial load.
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/**": true,
+      "**/.hg/store/**": true
+    },
+    "sync.autoUpload": true,
+    "sync.quietSync": true,
+    "editor.quickSuggestions": false,           //won't auto show quick suggestions
+    "editor.suggestOnTriggerCharacters": false, //won't trigger on spacebar)
+}
