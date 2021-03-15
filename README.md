@@ -26,18 +26,18 @@ Links: [Autohotkey Home](https://autohotkey.com/) and: [Autohotkey on GitHub](ht
 # How to Use #
 
 1. Copy [Lib\AHKEZ.ahk](https://github.com/jasc2v8/AHKEZ/blob/main/Lib/AHKEZ.ahk) to your [AHK Library folder](https://www.autohotkey.com/docs/Functions.htm#lib)
+1. Add the following at the top of your AHK script: `#Include <AHKEZ>`
 1. Try the [Hello World](https://github.com/jasc2v8/AHKEZ/blob/main/AHKScripts/Examples/HelloWorld.ahk) example
 1. Copy Lib\AHKEZ_API.ahk for use as a reference doc
-1. Add the following at the top of your AHK script: `#Include <AHKEZ>`
 1. Study the [AHKEZ docs](https://jasc2v8.github.io/AHKEZ/)
 1. Write code using AHK_L_v1 or AHKEZ, or both!
 1. Enjoy writing AHK scripts with minimal confusion when to use `variable` or `%variable%`
 
 # AHKEZ Differences from AHK_L #
 
-1. Most commands have Function() wrappers that don't require percent signs (%var%)
+1. Most commands have Function() wrappers that don't require percent signs: (var) vs. %var%
 1. Most Gui commands have Gui() wrappers intended for quick creation of simple Guis
-1. AHKEZ adds several functions, see Lib\AHKEZ_API.ahk and [AHKEZ docs](https://jasc2v8.github.io/AHKEZ/)
+1. AHKEZ adds several functions, see [Lib\AHKEZ.ahk](https://github.com/jasc2v8/AHKEZ/blob/main/Lib/AHKEZ.ahk)  and [AHKEZ docs](https://jasc2v8.github.io/AHKEZ/)
 
 # AHKEZ Featured Items #
 
