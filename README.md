@@ -1,4 +1,9 @@
 
+
+![Alt vmware](https://github.com/liangxiao3/redhat_note/raw/master/pic/basic_vmware.jpg)
+
+![AHKEZ](https://github.com/jasc2v8/ahkez/raw/master/Doc/res/ahk-keycap-transparent.jpg)
+
 # AHKEZ
 
 AutoHotkey EZ is a free and open source Library for AutoHotkey_L_v1.1.33.02
