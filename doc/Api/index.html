@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="jasc2v8" />
+  <meta name="dcterms.date" content="2021-03-15" />
+  <title>AHKEZ_Api</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="ahk-theme.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">AHKEZ_Api</h1>
+<p class="author">jasc2v8</p>
+<p class="date">March 15, 2021</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#toc">TOC</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#a-d">A-D</a></li>
+<li><a href="#e-h">E-H</a></li>
+<li><a href="#i-l">I-L</a></li>
+<li><a href="#m-p">M-P</a></li>
+<li><a href="#q-t">Q-T</a></li>
+<li><a href="#u-z">U-Z</a></li>
+</ul>
+</nav>
+<!-- reminder: replace = \"\" with = \\"\\" -->
+<h1 id="toc">TOC</h1>
+<p>The table of contents is listed above.</p>
+<h1 id="about">About</h1>
+<p>A simple one-liner API listing all functions in the AHKEZ library.</p>
+<h1 id="a-d">A-D</h1>
+<p>AhkClass(WinTitle)<br />
+AhkId(WinTitle)<br />
+AhkPid(WinTitle)<br />
+AhkExe(WinTitle)<br />
+AhkGroup(WinTitle)<br />
+AutoTrim(Options = "")<br />
+BlockInput(Options = "")<br />
+Click(Options = "")<br />
+ClipWait(Timeout = "", WaitForAnyData = "")<br />
+Control(SubCommand, Value = "", Control = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlClick(ControlOrPos = "", WinTitle = "", WinText = "", WhichButton = "", ClickCount = "", Options = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlFocus(Control = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlGet(SubCommand, Value = "", Control = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlGetFocus(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlGetID(Control = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlGetPos(ByRef X, ByRef Y, ByRef Width, ByRef Height, ControlID)<br />
+ControlGetText(Control = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlMove(Control = "", X = "", Y = "", Width = "", Height = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlSelect(ControlID, WindowID = "")<br />
+ControlSend(Control = "", Keys = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlSendRaw(Control = "", Keys = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+ControlSetText(Control = "", NewText = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+CoordMode(TargetType, RelativeTo := "Screen")<br />
+Critical(OnOffNumeric = "On")<br />
+DetectHiddenText(OnOff)<br />
+DetectHiddenWindows(OnOff)<br />
+Drive(SubCommand = "", Value1 = "", Value2 = "")<br />
+DriveGet(SubCommand, Value = "")<br />
+DriveSpaceFree(Path)</p>
+<p><em>(<a href="#toc">TOC</a>)</em></p>
+<h1 id="e-h">E-H</h1>
+<p>Edit()<br />
+EditAppend(ControlID, String = "")<br />
+EditClear(ControlID)<br />
+EditGetCurrentCol(ControlID)<br />
+EditGetCurrentLine(ControlID)<br />
+EditGetLineCount(ControlID)<br />
+EditGetText(ControlID)<br />
+EditGetSelectedText(ControlID)<br />
+EditPaste(ControlID, String = "")<br />
+EditSetText(ControlID, NewText = "")<br />
+EnvAdd(ByRef Var, Value = "" , TimeUnits = "")<br />
+EnvGet(EnvVarName)<br />
+EnvSet(EnvVar, Value)<br />
+EnvSub(ByRef Var, Value = "" , TimeUnits = "")<br />
+EnvUpdate()<br />
+FileAppend(Text = "", Filename = "", Encoding = "")<br />
+FileCopy(SourcePattern = "", DestPattern = "", Overwrite = "")<br />
+FileCopyDir(Source = "", Dest = "", Overwrite = "")<br />
+FileCreateDir(DirName = "")<br />
+FileCreateShortcut(Target, ByRef LinkFile, WorkingDir = "", Args = "", Description = "", IconFile = "", ShortcutKey = "", IconNumber = "", RunState = "")<br />
+FileDelete(FilePattern = "")<br />
+FileEncoding(Encoding = "")<br />
+FileGetAttrib(Filename = "")<br />
+FileGetShortcut(LinkFile = "")<br />
+FileGetSize(Filename = "", Units = "")<br />
+FileGetTime(Filename = "", WhichTime = "")<br />
+FileGetVersion(Filename = "")<br />
+FileMove(SourcePattern = "", DestPattern = "", Overwrite = 0)<br />
+FileMoveDir(Source = "", Dest = "", Flag = "")<br />
+FileRead(Filename)<br />
+FileReadLine(Filename, LineNum)<br />
+FileRecycle(FilePattern = "")<br />
+FileRecycleEmpty(DriveLetter = "")<br />
+FileRemoveDir(DirName, Recurse = "")<br />
+FileRename(SourcePattern = "", DestPattern = "", Overwrite = 0)<br />
+FileSelectFile(Options = "", RootDir = "", Prompt = "", Filter = "")<br />
+FileSelectFolder(StartingFolder = "", Options = "", Prompt = "")<br />
+FileSetAttrib(Attributes = "", FilePattern = "", OperateOnFolders = "", Recurse = "")<br />
+FileSetTime(YYYYMMDDHH24MISS = "", FilePattern = "", WhichTime = "", OperateOnFolders = "", Recurse = "")<br />
+FileWrite(Text = "", Filename = "", Overwrite = 0, Encoding = "")<br />
+FormatTime(YYYYMMDDHH24MISS = "", Format = "")<br />
+GroupActivate(GroupName, Mode = "")<br />
+GroupAdd(GroupName, WindowID, Label = "")<br />
+GroupClose(GroupName, Mode = "")<br />
+GroupDeactivate(GroupName, Mode = "")<br />
+Gui(SubCommand = "New", Value1 = "", Value2 = "", Value3 = "")<br />
+GuiControl(Subcommand = "", ControlID = "", Value = "")<br />
+GuiControlGet(Subcommand = "", ControlID = "", Param4 = "")</p>
+<p><em>(<a href="#toc">TOC</a>)</em></p>
+<h1 id="i-l">I-L</h1>
+<p>IfBetween(ByRef var, LowerBound, UpperBound)<br />
+IfIn(ByRef var, MatchList)<br />
+IfNotIn(ByRef var, MatchList)<br />
+IfContains(ByRef var, MatchList)<br />
+IfNotContains(ByRef var, MatchList)<br />
+ImageSearch(ByRef OutputVarX, ByRef OutputVarY, X1, Y1, X2, Y2, ImageFile)<br />
+IniDelete(Filename, Section, Key = "")<br />
+IniRead(Filename, Section, Key = "", Default = "")<br />
+IniWrite(ValueOrPairs = "", Filename = "", Section = "", Key="")<br />
+Input(Options = "", EndKeys = "", MatchList = "")<br />
+InputBox(Title = "", Prompt = "", HIDE = "", Width = "", Height = "", X = "", Y = "", Font = "", Timeout = "", Default = "")<br />
+IsBlank(var)<br />
+IsEmpty(var)<br />
+IsType(ByRef var, type)<br />
+Join(Separator, params*)<br />
+JoinPath(Dir, File)<br />
+KeyHistory()<br />
+KeyWait(KeyName, Options = "")<br />
+ListHotkeys()<br />
+ListLines(OnOff = "")</p>
+<p><em>(<a href="#toc">TOC</a>)</em></p>
+<h1 id="m-p">M-P</h1>
+<p>Menu(MenuName, SubCommand, Value1 = "", Value2 = "", Value3 = "", Value4 = "")<br />
+MouseClick(WhichButton = "", X = "", Y = "", ClickCount = "", Speed = "", DownOrUp = "", Relative = "")<br />
+MouseClickDrag(WhichButton, X1, Y1, X2, Y2, Speed = "", Relative = "")<br />
+MouseGetPos(ByRef OutputVarX = "", ByRef OutputVarY = "", ByRef OutputVarWin = "", ByRef OutputVarControl = "", Mode = "")<br />
+MouseMove(X, Y, Speed = "", Relative = "")<br />
+MB(Options = "", Title = "", Text = "", Timeout = "")<br />
+MsgBox(Options = "", Title = "", Text = "", Timeout = "")<br />
+OutputDebug(Text)<br />
+PixelGetColor(X, Y, RGB = "")<br />
+PixelSearch(ByRef OutputVarX, ByRef OutputVarY, X1, Y1, X2, Y2, ColorID, Variation = "", Mode = "")<br />
+PostMessage(Msg, wParam = "", lParam = "", Control = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+Process(SubCommand, PIDOrName = "", Value = "")</p>
+<p><em>(<a href="#toc">TOC</a>)</em></p>
+<h1 id="q-t">Q-T</h1>
+<p>Random(Min = "", Max = "")<br />
+RegDelete(KeyName , ValueName = "")<br />
+RegRead(RootKey, SubKey, ValueName = "")<br />
+RegWrite(Valuetype = "", RootKey = "", SubKey = "", ValueName = "", Value = "")<br />
+Reload()<br />
+Run(Target = "", WorkingDir = "", Mode = "")<br />
+RunAs(User = "", Password = "", Domain = "")<br />
+RunWait(Target, WorkingDir = "", Mode = "")<br />
+Send(Keys)<br />
+SendRaw(Keys)<br />
+SendInput(Keys)<br />
+SendPlay(Keys)<br />
+SendEvent(Keys)<br />
+SendLevel(Level)<br />
+SendMessage(Msg, wParam = "", lParam = "", Control = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "", Timeout = "")<br />
+SendMode(Mode)<br />
+SetBatchLines(Value)<br />
+SetCapsLockState(State)<br />
+SetControlDelay(Delay)<br />
+SetDefaultMouseSpeed(Speed)<br />
+SetKeyDelay(Delay = "", PressDuration = "", Play = "")<br />
+SetMouseDelay(Delay, Play = "")<br />
+SetNumLockState(State)<br />
+SetRegView(RegView)<br />
+SetScrollLockState(State)<br />
+SetStoreCapsLockMode(OnOff)<br />
+SetTimer(Label = "", PeriodOnOffDelete = "", Priority = "")<br />
+SetTitleMatchMode(MatchMode = "", Speed = "")<br />
+SetWinDelayDelay(Delay)<br />
+SetWorkingDir(DirName)<br />
+Shutdown(Code)<br />
+Sleep(DelayInMilliseconds)<br />
+Sort(ByRef VarName, Options = "")<br />
+SoundBeep(Frequency = "", Duration = "")<br />
+SoundGet(ComponentType = "", ControlType = "", DeviceNumber = "")<br />
+SoundGetWaveVolume(DeviceNumber = "")<br />
+SoundPlay(Filename, Wait = "")<br />
+SoundSet(NewSetting, ComponentType = "", ControlType = "", DeviceNumber = "")<br />
+SoundSetWaveVolume(Percent , DeviceNumber = "")<br />
+SplitPath(Path = "")<br />
+StatusBarGetText(Part = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+StatusBarWait(BarText = "", Timeout = "", Part# = "", WindowID = "")<br />
+StrContains(Haystack, Needle, CaseSensitive = false, StartingPos = 1, Occurrence = 1)<br />
+StrDeRef(String)<br />
+StrEndsWith(Haystack, Needle, CaseSensitive := false, Occurrence = 1)<br />
+StrStartsWith(Haystack, Needle, CaseSensitive := false, Occurrence = 1)<br />
+StrLower(ByRef InputVar, T = "")<br />
+StrUpper(ByRef InputVar, T = "")<br />
+StringCaseSense(OnOffLocale)<br />
+StringLower(ByRef InputVar, T = "")<br />
+StringUpper(ByRef InputVar, T = "")<br />
+Suspend(Mode = "")<br />
+SysGet(Subcommand, Param3 = "")<br />
+Thread(SubCommand, Value1 = "", Value2 = "")<br />
+Throw(Expression = "")<br />
+ToolTip(Text = "", X = "", Y = "", WhichToolTip = "")<br />
+TrayTip(Title = "", Text = "", Seconds = "", Options = "")</p>
+<p><em>(<a href="#toc">TOC</a>)</em></p>
+<h1 id="u-z">U-Z</h1>
+<p>UrlDownloadToFile(URL, Filename)<br />
+WinActivate(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinActivateBottom(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinGetActiveStats(ByRef Title, ByRef Width, ByRef Height, ByRef X, ByRef Y)<br />
+WinGetActiveTitle()<br />
+WinClose(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinGet(SubCommand = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinGetClass(OutputVar , WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinGetID(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinGetPos(ByRef X, ByRef Y, ByRef Width, ByRef Height, WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinGetText(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinGetTitle(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinHide(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinKill(WinTitle = "", WinText = "", SecondsToWait = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinMaximize(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinMenuSelectItem(WinTitle, WinText, Menu, SubMenu1 = "", SubMenu2 = "", SubMenu3 = "", SubMenu4 = "", SubMenu5 = "", SubMenu6 = "")<br />
+WinMinimize(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinMinimizeAll()<br />
+WinMinimizeAllUndo()<br />
+WinMove(WinTitle, WinText = "", X = "", Y = "", Width = "", Height = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinRestore(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinSet(SubCommand, Value, WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinSetTitle(WinTitle, WinText = "", NewTitle = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinShow(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinWait(WinTitle = "", WinText = "", TimeOut = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinWaitActive(WinTitle = "", WinText = "", TimeOut = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinWaitNotActive(WinTitle = "", WinText = "", TimeOut = "", ExcludeTitle = "", ExcludeText = "")<br />
+WinWaitClose(WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "")</p>
+<p><em>(<a href="#toc">TOC</a>)</em></p>
+<div id="footer">
+	Dedicated to the public domain without warranty or liability (CC0 1.0) <http://creativecommons.org/publicdomain/zero/1.0/>
+</div>
+
+</body>
+</html>
