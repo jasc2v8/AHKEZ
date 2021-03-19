@@ -22,6 +22,7 @@
   <![endif]-->
 </head>
 <body>
+<header id="top"></header>
 <header id="title-block-header">
 <h1 class="title">AHKEZ Library</h1>
 <p class="author">jasc2v8</p>
@@ -29,7 +30,6 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#toc">TOC</a></li>
 <li><a href="#quick-reference">Quick Reference</a></li>
 <li><a href="#ahkclassexegroupidpid">Ahk[Class|Exe|Group|Id|Pid]</a></li>
 <li><a href="#controlselect">ControlSelect</a></li>
@@ -50,8 +50,6 @@
 </ul>
 </nav>
 <!-- reminder: replace = "" with = \"\" -->
-<h1 id="toc">TOC</h1>
-<p>The table of contents is listed above.</p>
 <h1 id="quick-reference">Quick Reference</h1>
 <p>This doc is for the additional Functions included in the AHKEZ.ahk library.<br />
 For all AHK built-in commands and functions see the <a href="https://www.autohotkey.com/docs/AutoHotkey.htm">AutoHotkey Quick Reference</a></p>
@@ -64,7 +62,7 @@ For all AHK built-in commands and functions see the <a href="https://www.autohot
 <dd>WindowID  is the HWND of a window  e.g. hMainGui
 </dd>
 </dl>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="ahkclassexegroupidpid">Ahk[Class|Exe|Group|Id|Pid]</h1>
 <p>Returns the "ahk_type" WinTitle:</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -109,7 +107,7 @@ AhkClass(p), AhkExe(p), AhkGroup(p), AhkId(p), AhkPid(p)
 <h2 class="unlisted unnumbered" id="examples">Examples</h2>
 <pre><code>AHK_L: Control, %SubCommand%, %Value%, %Control%, ahk_id %WinTitle%
  AHKEZ: Control(&quot;SubCommand&quot;, &quot;Value&quot;, &quot;Control&quot;, AhkId(&quot;MyWinTitle&quot;))</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="controlselect">ControlSelect</h1>
 <p>Selects a control</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -133,7 +131,7 @@ ControlSelect(ControlID, WindowID = "")
 <h2 class="unlisted unnumbered" id="examples-1">Examples</h2>
 <pre><code>AHK_L: PostMessage, WM_NEXTDLGCTL:=0x0028, %hBtnOK%, 1, , ahk_id %hMainGui% 
  AHKEZ: ControlSelect(hBtnOK, hMainGui)</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="edit-functions">Edit Functions</h1>
 <p>These functions set or return the text in an Edit control.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -177,7 +175,7 @@ The ControlID is found using WinGet(,"MyTitle").</p>
 <p>#1: Using AhkId() to get the ControlID from the ClassNN</p>
 <pre><code>AHK_L: Control, EditPaste, %String%, ahk_class Edit1, ahk_id %hEditMemo%
  AHKEZ: EditPaste(AhkId(&quot;Edit1&quot;), &quot;String&quot;)</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="filewrite">FileWrite</h1>
 <p>Writes text to a file with option to overwrite.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -217,7 +215,7 @@ A_LastError is set to the result of the operating system’s GetLastError() func
  AHK_L: FileAppend, %String%, %FileName%, 1
  
  AHKEZ: FileWrite(String, FileName, 1)</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="gui">Gui</h1>
 <p>Creates and manages windows and controls.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -246,7 +244,7 @@ Gui(SubCommand = "New", Value1 = "", Value2 = "", Value3 = "")
  
     hGuiB := Gui(&quot;New&quot;, , &quot;MyTitle&quot;)
     MsgBox % &quot;HWNDhGui = &quot; hGuiB</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="is-functions">Is Functions</h1>
 <p>These functions test a variable and return True or False.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -295,7 +293,7 @@ IsType - Returns True if var is type, else False.</p>
 
     If IsType(MyVar, &quot;string&quot;)  
         MsgBox(&quot;is string&quot;)</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="join">Join</h1>
 <p>Concatenates strings together, or multiples of the same string.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -340,7 +338,7 @@ Join(Separator, Params*)
     v := Join(&quot;:&quot;, &quot;The result is &quot;, MyValue := -3.14)
      MsgBox(var) ; &quot;The result is: -3.14&quot;
     </code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="joinpath">JoinPath</h1>
 <p>Concatenates Dir and File, fixing directory separator if necessary.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -383,7 +381,7 @@ JoinPath(Dir, File)
         MsgBox(attrib)
 
     MsgBox(FileGetAttrib(JoinPath(A_WinDir, &quot;\System32\shell32.dll&quot;)))</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="msgbox-mb">MsgBox [MB]</h1>
 <p>MB is an abbreviation for MsgBox().</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -404,7 +402,7 @@ MsgBox(Options = "", Title = "", Text = "", Timeout = "")
     MB(&quot;The result is:&quot; v)  
     
     MsgBox(&quot;The result is:&quot; v)</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="settitlematchmode">SetTitleMatchMode</h1>
 <p>Sets the matching behavior of the WinTitle parameter in Win commands.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -482,7 +480,7 @@ Obj.Drive</p>
     MsgBox(&quot;FileName: &quot; v)
     
     MsgBox(SplitPath(JoinPath(A_WinDir, &quot;\System32\shell32.dll&quot;)).FileName)</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="strcontains">StrContains</h1>
 <p>Searches for a given occurrence of a string, from the left or the right.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -504,7 +502,7 @@ StrContains(Haystack, Needle, CaseSensitive = false, StartingPos = 1, Occurrence
 
     MsgBox(StrContains(&quot;123abc789&quot;, &quot;abc&quot;)) ; Returns True = 1
     MsgBox(StrContains(&quot;123abc789&quot;, &quot;def&quot;)) ; Returns False = 0</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="strderef">StrDeRef</h1>
 <p>Expands variable references and escape sequences contained inside other variables.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -522,7 +520,7 @@ StrDeRef(String)
  AHKEZ:
  
     MsgBox(StrDeref(&quot;%var1%def%var2%&quot;))  ; Reports abcdef123</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="strendswith">StrEndsWith</h1>
 <p>Searches for a given occurrence of a string, from the right to the left.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -544,7 +542,7 @@ StrEndsWith(Haystack, Needle, CaseSensitive := False, Occurrence = 1)
  AHKEZ:
  
     MsgBox(StrEndsWith(String, &quot;Lazy Dog&quot;))  ; Reports True = 1</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
 <h1 id="strsstartswith">StrsStartsWith</h1>
 <p>Searches for a given occurrence of a string, from the left to the right.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -566,15 +564,12 @@ StrStartsWith(Haystack, Needle, CaseSensitive := False, Occurrence = 1)
  AHKEZ:
  
     MsgBox(StrStartsWith(String, &quot;The Quick&quot;)) ; Reports True = 1</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
-
-<p><em>(<a href="#home">home</a>)</em></p>
-
-
+<p><em>([TOC])</em></p>
 <h1 id="donations">Donations</h1>
 <p><a href="https://www.paypal.me/JimDreherHome"><img src="https://img.shields.io/badge/Buy_me_a_cup_of_Coffee-PayPal-red.svg" alt="Donate" /></a></p>
 <p>If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the donation button above. Thank you.</p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><em>([TOC])</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <div id="footer">
 	Dedicated to the public domain without warranty or liability (CC0 1.0) <http://creativecommons.org/publicdomain/zero/1.0/>
 </div>
