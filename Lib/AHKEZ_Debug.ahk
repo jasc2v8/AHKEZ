@@ -641,7 +641,7 @@ Gui_Timer_Start:
     MsgBox(0, vTitle, vOut)
   } ;End_ListVars
   
-  ListArray(Options = "", Title = "List Array 2D", Array = "", Gui#="ListArray_") {
+  ListArray(Options = "", Title = "", Array = "", Gui#="ListArray_") {
     ;Options: 1=1D Array, 2=2D Array
     Switch Options {
       Case "",0,1,"1D":
@@ -665,10 +665,12 @@ Gui_Timer_Start:
     Gui("Add", "Button", "wp h30 gListArray_CopySelected", "Copy Selected")
     hBtnOK := Gui("Add", "Button", "wp h30", "OK")
     if (Is1D) {
+      Title = "List Array 1D"
       For key, value in Array
         LV_Add("", key, value)
     }
     if (Is2D) {
+      Title = "List Array 2D"
       For key1, element in Array
         For key2, Value in element
           LV_Add("", key1, key2, value)    
