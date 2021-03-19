@@ -7,10 +7,6 @@ author: jasc2v8
 date: March 13, 2021
 ---
 
-# TOC
-
-The table of contents is listed above.
-
 # Quick Reference
 
 This doc is for the additional Functions included in the AHKEZ.ahk library.  
@@ -24,7 +20,7 @@ License: Dedicated to the public domain without warranty or liability [(CC0 1.0)
 ~ ControlID is the HWND of a control e.g. hBtnOK
 ~ WindowID &nbsp;is the HWND of a window &nbsp;e.g. hMainGui
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Ahk\[Class|Exe|Group|Id|Pid\]
 
@@ -60,7 +56,7 @@ Use:
 	AHK_L: Control, %SubCommand%, %Value%, %Control%, ahk_id %WinTitle%
 	 AHKEZ: Control("SubCommand", "Value", "Control", AhkId("MyWinTitle"))
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # ControlSelect
 
@@ -92,7 +88,7 @@ If the WindowID is empty, the ancestor window of the ControlID will be used.
 	AHK_L: PostMessage, WM_NEXTDLGCTL:=0x0028, %hBtnOK%, 1, , ahk_id %hMainGui% 
 	 AHKEZ: ControlSelect(hBtnOK, hMainGui)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Edit Functions
 
@@ -151,7 +147,7 @@ The ControlID is found using WinGet(,\"MyTitle\").
 	AHK_L: Control, EditPaste, %String%, ahk_class Edit1, ahk_id %hEditMemo%
 	 AHKEZ: EditPaste(AhkId("Edit1"), "String")
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # FileWrite
 
@@ -205,7 +201,7 @@ Function wrapper for [FileDelete](https://www.autohotkey.com/docs/commands/FileD
 	 
 	 AHKEZ: FileWrite(String, FileName, 1)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Gui
 
@@ -246,7 +242,7 @@ AHKEZ doesn't support this option, instead the HWND is obtains as follows:
 		hGuiB := Gui("New", , "MyTitle")
 		MsgBox % "HWNDhGui = " hGuiB
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Is Functions
 
@@ -309,7 +305,7 @@ Function wrapper for [IfIs](https://www.autohotkey.com/docs/commands/IfIs.htm)
 		If IsType(MyVar, "string")  
 			MsgBox("is string")
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Join
 
@@ -367,7 +363,7 @@ Params* = [Variadic variables](https://www.autohotkey.com/docs/Functions.htm#Var
 		 MsgBox(var) ; "The result is: -3.14"
 		
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # JoinPath
 
@@ -422,7 +418,7 @@ Note the AHKEZ examples below with minimal confusion of var or %var%
 
 		MsgBox(FileGetAttrib(JoinPath(A_WinDir, "\System32\shell32.dll")))
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # MsgBox [MB]
 
@@ -451,7 +447,7 @@ Function wrapper for [MsgBox](https://www.autohotkey.com/docs/commands/MsgBox.ht
 		
 		MsgBox("The result is:" v)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # SetTitleMatchMode
 
@@ -550,7 +546,7 @@ Function wrapper for [SplitPath](https://www.autohotkey.com/docs/commands/SplitP
 		
 		MsgBox(SplitPath(JoinPath(A_WinDir, "\System32\shell32.dll")).FileName)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # StrContains
 
@@ -581,7 +577,7 @@ Function wrapper for [InStr](https://www.autohotkey.com/docs/commands/InStr.htm)
 		MsgBox(StrContains("123abc789", "abc")) ; Returns True = 1
 		MsgBox(StrContains("123abc789", "def")) ; Returns False = 0
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # StrDeRef
 
@@ -607,7 +603,7 @@ Implementation of [ExDeref](https://www.autohotkey.com/docs/commands/RegExMatch.
 	 
 		MsgBox(StrDeref("%var1%def%var2%"))  ; Reports abcdef123
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # StrEndsWith
 
@@ -638,7 +634,7 @@ Implementation of [SubStr](https://www.autohotkey.com/docs/commands/SubStr.htm)
 	 
 		MsgBox(StrEndsWith(String, "Lazy Dog"))  ; Reports True = 1
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # StrsStartsWith
 
@@ -669,7 +665,7 @@ Implementation of [InStr](https://www.autohotkey.com/docs/commands/InStr.htm)
 	 
 		MsgBox(StrStartsWith(String, "The Quick")) ; Reports True = 1
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Donations
 
@@ -677,4 +673,4 @@ Implementation of [InStr](https://www.autohotkey.com/docs/commands/InStr.htm)
 
 If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the donation button above. Thank you.
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
