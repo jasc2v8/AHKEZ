@@ -7,10 +7,6 @@ author: jasc2v8
 date: March 13, 2021
 ---
 
-# TOC
-
-The table of contents is listed above.
-
 # Overview
 
 A window to display debug information while testing a script
@@ -29,7 +25,7 @@ All functions documented below assume the Debug class has been instantiated:
 
 License: Dedicated to the public domain without warranty or liability [(CC0 1.0)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Append
 
@@ -57,7 +53,7 @@ No remarks.
 
 | D.Append("Value=" v)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Clear
 
@@ -71,7 +67,7 @@ Clear()
 
 | D.Clear()
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Close
 
@@ -85,7 +81,7 @@ D.Close()
 
 | D.Close()
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # GuiSize
 
@@ -117,7 +113,7 @@ Function wrapper for [FileDelete](https://www.autohotkey.com/docs/commands/FileD
 
     D.GuiSize("Large")  ;change to "Large"
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Hide
 
@@ -131,7 +127,7 @@ Hide()
 
     D.Hide()
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # ListArray
 
@@ -159,7 +155,7 @@ ListArray(MyArray)
 
     D.ListArray("My Title, MyArray)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Log
 
@@ -199,7 +195,7 @@ Log(Text := "", Filename := "", TimeFormat := "", Overwrite := False )
 
     D.Log("Starting My Text", JoinPath(A_ScriptDir, "MyLogFile.log")),,True)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Out
 
@@ -217,7 +213,7 @@ See Append()
 
     D.Out("Result: " vResult)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Pause [P]
 
@@ -240,7 +236,7 @@ No remarks.
 
     D.Pause()  ; Press Resume to continue...
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Paste
 
@@ -288,7 +284,7 @@ PasteArray(Title, array)
 
     D.ListArray("My Title, MyArray))
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # SetText
 
@@ -302,7 +298,7 @@ SetText(String)
 
     D.SetText("Test finished!")
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Show
 
@@ -332,8 +328,7 @@ Implementation of [SplashTextOn/Off](https://www.autohotkey.com/docs/commands/Sp
 
     Splash(,,5000,80,80) ; Splash defaults for 5 seconds in upper left corner
 
-*([TOC])*
-
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Donations
 
@@ -341,4 +336,4 @@ Implementation of [SplashTextOn/Off](https://www.autohotkey.com/docs/commands/Sp
 
 If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the donation button above. Thank you.
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>

@@ -7,10 +7,6 @@ author: jasc2v8
 date: March 13, 2021
 ---
 
-# TOC
-
-The table of contents is listed above.
-
 # Overview
 
 A unit test class for AHKEZ.
@@ -25,7 +21,7 @@ All functions documented below assume the Debug class has been instantiated:
 
 License: Dedicated to the public domain without warranty or liability [(CC0 1.0)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Assert
 
@@ -53,7 +49,7 @@ If the option "Debug" is set, then a message box will be shown.
 
     T.Assert(A_ScriptName, A_LineNumber, v, True)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # ClearLog
 
@@ -63,7 +59,7 @@ Clears and deletes the log file.
 ClearLog()
 </p>
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # ClearOption
 
@@ -73,7 +69,7 @@ Clears the options and deletes the ini file.
 ClearOptions()
 </p>
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # EditLog
 
@@ -83,7 +79,7 @@ Opens the log file using the system default editor for the log file type.
 EditLog()
 </p>
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # WriteLog
 
@@ -93,7 +89,7 @@ Appends text to the log file.
 WriteLog(LogFile = "", Text = "") 
 </p>
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # GetOption
 
@@ -113,7 +109,7 @@ Gets an option setting.
 > "Log", "+Log", "-Log"
 > "+Debug, -Log"
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # GetSavedWinText
 
@@ -125,7 +121,7 @@ P is an abbreviation for Pause().
 GetSavedWinText()
 </p>
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 #  SetOption
 
@@ -153,7 +149,7 @@ See Append()
 
     D.Out("Result: " vResult)
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # StartSendKeyTimer
 
@@ -183,7 +179,7 @@ StartSendKeyTimer(Duration, Keys = "{Enter}")
 
     StartSendKeyTimer(2000) ; wait 2 seconds then send the {Enter} key
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # MillisecToTime
 
@@ -193,7 +189,7 @@ Converts milliseconds to hours:minutes:seconds "HH:MM:SS".
 MillisecToTime(msec)
 </p>
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Donations
 
@@ -201,4 +197,4 @@ MillisecToTime(msec)
 
 If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the donation button above. Thank you.
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>

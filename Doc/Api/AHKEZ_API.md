@@ -7,10 +7,6 @@ author: jasc2v8
 date: March 15, 2021
 ---
 
-# TOC
-
-The table of contents is listed above.
-
 # About
 
 A simple one-liner API listing all functions in the AHKEZ library.
@@ -47,7 +43,7 @@ Drive(SubCommand = \"\", Value1 = \"\", Value2 = \"\")
 DriveGet(SubCommand, Value = \"\")  
 DriveSpaceFree(Path)  
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # E-H
 
@@ -100,7 +96,7 @@ Gui(SubCommand = \"New\", Value1 = \"\", Value2 = \"\", Value3 = \"\")
 GuiControl(Subcommand = \"\", ControlID = \"\", Value = \"\")  
 GuiControlGet(Subcommand = \"\", ControlID = \"\", Param4 = \"\")  
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # I-L
 
@@ -125,7 +121,7 @@ KeyWait(KeyName, Options = \"\")
 ListHotkeys()  
 ListLines(OnOff = \"\")  
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # M-P
 
@@ -142,7 +138,7 @@ PixelSearch(ByRef OutputVarX, ByRef OutputVarY, X1, Y1, X2, Y2, ColorID, Variati
 PostMessage(Msg, wParam = \"\", lParam = \"\", Control = \"\", WinTitle = \"\", WinText = \"\", ExcludeTitle = \"\", ExcludeText = \"\")  
 Process(SubCommand, PIDOrName = \"\", Value = \"\")  
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # Q-T
 
@@ -204,7 +200,7 @@ Throw(Expression = \"\")
 ToolTip(Text = \"\", X = \"\", Y = \"\", WhichToolTip = \"\")  
 TrayTip(Title = \"\", Text = \"\", Seconds = \"\", Options = \"\")
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
 
 # U-Z
 
@@ -237,4 +233,4 @@ WinWaitActive(WinTitle = \"\", WinText = \"\", TimeOut = \"\", ExcludeTitle = \"
 WinWaitNotActive(WinTitle = \"\", WinText = \"\", TimeOut = \"\", ExcludeTitle = \"\", ExcludeText = \"\")  
 WinWaitClose(WinTitle = \"\", WinText = \"\", ExcludeTitle = \"\", ExcludeText = \"\")  
 
-*([TOC])*
+<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>

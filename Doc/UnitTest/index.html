@@ -22,6 +22,7 @@
   <![endif]-->
 </head>
 <body>
+<header id="top"></header>
 <header id="title-block-header">
 <h1 class="title">AHKEZ_UnitTest</h1>
 <p class="author">jasc2v8</p>
@@ -29,7 +30,6 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#toc">TOC</a></li>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#assert">Assert</a></li>
 <li><a href="#clearlog">ClearLog</a></li>
@@ -45,8 +45,6 @@
 </ul>
 </nav>
 <!-- reminder: replace = "" with = \"\" -->
-<h1 id="toc">TOC</h1>
-<p>The table of contents is listed above.</p>
 <h1 id="overview">Overview</h1>
 <p>A unit test class for AHKEZ.</p>
 <p>Designed to be used with _Tests.ahk</p>
@@ -54,7 +52,7 @@
 <pre><code>T := New UnitTest</code></pre>
 <p><a href="https://github.com/jasc2v8/AHKEZ">AutoHotkey EZ</a> is a free and open source version of <a href="https://github.com/AutoHotkey/AutoHotkey">AHK_L_v1.1.33.02</a></p>
 <p>License: Dedicated to the public domain without warranty or liability <a href="http://creativecommons.org/publicdomain/zero/1.0/">(CC0 1.0)</a></p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="assert">Assert</h1>
 <p>Asserts that the test value matches the expected value.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -69,31 +67,31 @@ Assert(SN, LN, IS, SB)
 <p>If the assert fails it will be noted in the log file. If the option “Debug” is set, then a message box will be shown.</p>
 <h2 class="unlisted unnumbered" id="examples">Examples</h2>
 <pre><code>T.Assert(A_ScriptName, A_LineNumber, v, True)</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="clearlog">ClearLog</h1>
 <p>Clears and deletes the log file.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
 ClearLog()
 </p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="clearoption">ClearOption</h1>
 <p>Clears the options and deletes the ini file.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
 ClearOptions()
 </p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="editlog">EditLog</h1>
 <p>Opens the log file using the system default editor for the log file type.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
 EditLog()
 </p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="writelog">WriteLog</h1>
 <p>Appends text to the log file.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
 WriteLog(LogFile = "“, Text =”")
 </p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="getoption">GetOption</h1>
 <p>Gets an option setting.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -105,14 +103,14 @@ GetOption(Option)
 <p>Type: String</p>
 <p>“Debug”, “+Debug”, “-Debug”, “Log”, “+Log”, “-Log” “+Debug, -Log”</p>
 </blockquote>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="getsavedwintext">GetSavedWinText</h1>
 <p>Gets text saved from a window - see StartSendKeyTimer below.</p>
 <p>P is an abbreviation for Pause().</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
 GetSavedWinText()
 </p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="setoption">SetOption</h1>
 <p>Sets an option setting.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
@@ -128,7 +126,7 @@ SetOption(OptionsCSV)
 <p>See Append()</p>
 <h2 class="unlisted unnumbered" id="examples-1">Examples</h2>
 <pre><code>D.Out(&quot;Result: &quot; vResult)</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="startsendkeytimer">StartSendKeyTimer</h1>
 <p>Save the text in the active window to be retrived late by GetWinText().</p>
 <p>Send a key to the active window, typically used to press the default button to execute a test or close the test window.</p>
@@ -148,17 +146,17 @@ StartSendKeyTimer(Duration, Keys = “{Enter}”)
 </blockquote>
 <h2 class="unlisted unnumbered" id="examples-2">Examples</h2>
 <pre><code>StartSendKeyTimer(2000) ; wait 2 seconds then send the {Enter} key</code></pre>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="millisectotime">MillisecToTime</h1>
 <p>Converts milliseconds to hours:minutes:seconds “HH:MM:SS”.</p>
 <p style="padding:0.5em;background-color:#ffffaa;">
 MillisecToTime(msec)
 </p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <h1 id="donations">Donations</h1>
 <p><a href="https://www.paypal.me/JimDreherHome"><img src="https://img.shields.io/badge/Buy_me_a_cup_of_Coffee-PayPal-red.svg" alt="Donate" /></a></p>
 <p>If AHKEZ helps you in some way, then please buy me a cup of coffee by clicking on the donation button above. Thank you.</p>
-<p><em>(<a href="#toc">TOC</a>)</em></p>
+<p><a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a></p>
 <div id="footer">
 	Dedicated to the public domain without warranty or liability (CC0 1.0) <http://creativecommons.org/publicdomain/zero/1.0/>
 </div>
