@@ -10,7 +10,8 @@
            Search below for Help_Pages for declaration, options, and functions
   Usage:   #Include <AHKEZ_Debug>
   GitHub:  https://github.com/jasc2v8/AHKEZ
-  Version: 0.1.2/2021-03-11_19:03/jasc2v8/Add ListArray
+  Version: 1.0.0/2021-03-20_06:31/jasc2v8/Fix ListArray Title
+           0.1.2/2021-03-11_19:03/jasc2v8/Add ListArray
            0.1.2/2021-03-11_17:03/jasc2v8/Fix vTitle in ListVars
            0.1.1/2021-03-05_22:19/jasc2v8/Indent with spaces not tabs
            0.1.0/2021-03-04_23:45/jasc2v8
@@ -665,12 +666,12 @@ Gui_Timer_Start:
     Gui("Add", "Button", "wp h30 gListArray_CopySelected", "Copy Selected")
     hBtnOK := Gui("Add", "Button", "wp h30", "OK")
     if (Is1D) {
-      Title = "List Array 1D"
+      Title := IsEmpty(Title) ? "List Array 1D" : Title
       For key, value in Array
         LV_Add("", key, value)
     }
     if (Is2D) {
-      Title = "List Array 2D"
+      Title := IsEmpty(Title) ? "List Array 2D" : Title
       For key1, element in Array
         For key2, Value in element
           LV_Add("", key1, key2, value)    
